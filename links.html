@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links - Tuesday Men's Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul class="desktop-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="why.html">Why We Get Together</a></li>
+            <li><a href="helpful-things.html">Inspiration</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="why.html">Why We Get Together</a></li>
+                <li><a href="helpful-things.html">Inspiration</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <section class="page-content">
+        <h1>Links</h1>
+
+        <div class="info-block">
+            <h2>The California Walk</h2>
+            <p>Walk across California. Another JC project.</p>
+            <p><a href="https://thecaliforniawalk.com" target="_blank">thecaliforniawalk.com</a></p>
+        </div>
+
+        <div class="info-block">
+            <h2>Other Things We Love</h2>
+            <ul class="links-list">
+                <li><a href="https://www.wendemuseum.org" target="_blank">Wende Museum</a> — Our gracious host in Culver City</li>
+                <li><a href="https://www.journeymen.co/" target="_blank">The Journeymen</a> — Men's work that inspired TMC</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

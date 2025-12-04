@@ -1,0 +1,478 @@
+/* ============================================
+   BASIC RESET
+   ============================================ */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 15px 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+    display: block;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(15px);
+    z-index: 99;
+    padding: 20px 0;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+    list-style: none;
+}
+
+.mobile-menu a {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('images/hero-image_deskop.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-image {
+    display: none;
+}
+
+/* Session Info Box */
+.session-info {
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    z-index: 10;
+    max-width: 400px;
+}
+
+.session-info h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.session-info .date {
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.session-info p {
+    margin-bottom: 8px;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+.content-section, .page-content {
+    padding: 80px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.content-section h1, .content-section h2, .page-content h1, .page-content h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.content-section h1, .page-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content-section h2, .page-content h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.page-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.page-content p, .page-content li {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.info-block {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-block:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   TESTIMONIALS (Generic)
+   ============================================ */
+.testimonial {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.testimonial blockquote {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.testimonial cite {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    color: #666;
+}
+
+/* ============================================
+   FEED QUOTES (Helpful Things Page)
+   ============================================ */
+
+/* Base quote styling */
+.feed-quote {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/* TESTIMONIALS - Warm, personal feel */
+.feed-quote.testimonial {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%);
+    border-left: 5px solid #ff9933;
+    box-shadow: 0 2px 8px rgba(255, 153, 51, 0.1);
+}
+
+.feed-quote.testimonial blockquote {
+    font-style: italic;
+    color: #333;
+}
+
+.feed-quote.testimonial cite {
+    color: #cc6600;
+    font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.95em;
+}
+
+.feed-quote.testimonial::before {
+    content: "💬 Member Testimonial";
+    display: block;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ff9933;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* INSPIRATIONAL QUOTES - Cool, reflective feel */
+.feed-quote.inspiration {
+    background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 100%);
+    border-left: 5px solid #3399ff;
+    box-shadow: 0 2px 8px rgba(51, 153, 255, 0.1);
+}
+
+.feed-quote.inspiration blockquote {
+    font-style: normal;
+    color: #2c3e50;
+    font-weight: 400;
+}
+
+.feed-quote.inspiration cite {
+    color: #2874a6;
+    font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.95em;
+}
+
+.feed-quote.inspiration::before {
+    content: "✨ Inspiration";
+    display: block;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #3399ff;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* Hover effects */
+.feed-quote:hover {
+    transform: translateY(-2px);
+}
+
+.feed-quote.testimonial:hover {
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.2);
+}
+
+.feed-quote.inspiration:hover {
+    box-shadow: 0 4px 12px rgba(51, 153, 255, 0.2);
+}
+
+/* ============================================
+   FLYER IMAGES (Helpful Things Page)
+   ============================================ */
+.feed-flyer {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.feed-flyer img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.feed-flyer img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   FLYER & READING ITEMS (Other Pages)
+   ============================================ */
+.flyer-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.flyer-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.flyer-caption {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #666;
+    font-size: 16px;
+}
+
+.reading-item {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.reading-item h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reading-item p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.recommender {
+    font-style: italic;
+    color: #888;
+    font-size: 16px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+/* ============================================
+   RESPONSIVE / MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav .desktop-nav {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    /* Hero */
+    .hero {
+        background-image: url('images/hero-image_mobile.jpg');
+        background-attachment: scroll;
+        background-position: center center;
+    }
+    
+    .session-info {
+        left: 20px;
+        right: 20px;
+        bottom: 40px;
+        padding: 20px;
+    }
+    
+    /* Content */
+    .content-section, .page-content {
+        padding: 60px 20px;
+    }
+    
+    .page-content h2 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    
+    /* Flyer images */
+    .feed-flyer img {
+        max-height: 400px;
+    }
+    
+    .flyer-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    /* Reading items */
+    .reading-item {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .reading-item h3 {
+        font-size: 20px;
+    }
+    
+    .reading-item p {
+        font-size: 16px;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .feed-flyer img {
+        max-height: 300px;
+    }
+}

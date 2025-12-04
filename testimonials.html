@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Tuesday Men's Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+<nav>
+    <ul class="desktop-nav">
+        <!-- Keep your existing nav links exactly as they are -->
+        <li><a href="details.html">Details</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+    </ul>
+    
+    <!-- Add this hamburger menu -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- Add this mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <!-- Duplicate your nav links here -->
+            <li><a href="details.html">Details</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="materials.html">Materials</a></li>
+            <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Content -->
+    <section class="page-content">
+        <h1>What People Say</h1>
+        
+        <div class="testimonial">
+            <blockquote>
+                " What a beautiful space the Tuesday Men’s Club is for me to feel seen and heard in the presence of a group of caring, thoughtful men. This space has provided me the opportunity to take a chance on being vulnerable in a group of strangers and has consistently rewarded me with affirmation, connection, and support. I feel lucky to be a part of this group and am grateful for JC and the Wende for making this group happen."
+            </blockquote>
+            <cite>— Derek</cite>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "I no longer feel the need to use my phone when I pee."
+            </blockquote>
+            <cite>— Mike</cite>
+        </div>
+
+    </section>
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+        </script>
+        </body>
+        </html>
+</body>
+</html>

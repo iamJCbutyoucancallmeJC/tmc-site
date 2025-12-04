@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details - Tuesday Men's Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+<nav>
+    <ul class="desktop-nav">
+        <!-- Keep your existing nav links exactly as they are -->
+        <li><a href="details.html">Details</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+    </ul>
+    
+    <!-- Add this hamburger menu -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- Add this mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <!-- Duplicate your nav links here -->
+            <li><a href="details.html">Details</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="materials.html">Materials</a></li>
+            <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Content -->
+    <section class="page-content">
+        <h1>Details</h1>
+        
+        <div class="info-block">
+            <h2>Tuesday Men's Club</h2>
+            <ul></ul>
+           <p>This isn't group therapy and there's nothing to fix. We come together to hear one another's real experiences. We like connection, compassion, and presence. We end casually with ice cream and conversation.</p>
+        </div>
+
+        <div class="info-block">
+            <h2>When & Where</h2>
+            <p><strong>Every other Tuesday</strong><br>
+            7:00pm - 8:30pm</p>
+            
+            <p><strong>Wende Museum</strong><br>
+            10808 Culver Blvd, Culver City, CA<br>
+            Use parking lot entrance</p>
+        </div>
+
+        <div class="info-block">
+            <h2>What It Is</h2>
+            <ul></ul>
+            <p>Tuesday Men's Club welcomes men of all ages and backgrounds into a space for honest connection, reflection, and conversation. We begin with introductions and a prompt, followed by a short guided meditation—often centered on breath or loving-kindness.
+            <p>From there, we move into lightly facilitated group discussion. Topics have included making friends, being a parent, finding joy in our everyday, and how solitude works. Also sometimes we talk football, work, and boogie boarding.</p>
+        </div>
+
+        <div class="info-block">
+            <h2>How We Do It</h2>
+            <p>Each session follows a simple structure:</p>
+            <ul>
+                    <li><strong>Introductions</strong> - Brief check-ins with a simple prompt</li>
+                    <li><strong>Meditation</strong> - 15-20 minutes of guided meditation, often loving-kindness practice</li>
+                    <li><strong>Discussion</strong> - Open conversation about topics like grief, fatherhood, friendship, aging, and everyday emotions</li>
+                    <li><strong>Ice cream</strong> - Casual conversation to close</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h2>First Time?</h2>
+            <p>Drop-ins are welcome. No experience with meditation or group discussion necessary.</p>
+            <p>We speak from personal experience, listen without giving advice, and keep conversations confidential.</p>
+            <p></p>
+        </div>
+
+        <div class="info-block">
+            <h2>Upcoming Sessions</h2>
+            <p>September 30<br>
+            October 14, October 28<br>
+            November 4, November 18<br>
+            December 2, December 16</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Questions?</h2>
+            <p>Call JC at <strong>310-400-6558</strong></p>
+        </div>
+    </section>
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+        </script>
+        </body>
+        </html>
+</body>
+</html>
