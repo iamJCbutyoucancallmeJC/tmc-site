@@ -12,31 +12,31 @@
         <ul class="desktop-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="details.html">Details</a></li>
-            <li><a href="helpful-things.html">Helpful Things</a></li>
-            <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+            <li><a href="why.html">Why We Get Together</a></li>
+            <li><a href="helpful-things.html">Inspiration</a></li>
+            <li><a href="links.html">Links</a></li>
         </ul>
-        
-        <!-- Hamburger Menu -->
+
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        
-        <!-- Mobile Menu -->
+
         <div class="mobile-menu" id="mobileMenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="details.html">Details</a></li>
-                <li><a href="helpful-things.html">Helpful Things</a></li>
-                <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+                <li><a href="why.html">Why We Get Together</a></li>
+                <li><a href="helpful-things.html">Inspiration</a></li>
+                <li><a href="links.html">Links</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Content Feed -->
     <section class="page-content">
-        <h1>Helpful Things</h1>
+        <h1>Inspiration</h1>
         
         <!-- Feed container - items will be randomized on each load -->
         <div class="feed" id="feed">
@@ -76,6 +76,13 @@
                     It's what I live for.
                 </blockquote>
                 <cite>— Uncle Erwin</cite>
+            </div>
+
+            <!-- PINNED LINKS (marked with data-pinned="true") -->
+            <div class="feed-link pinned" data-feed-item data-type="link" data-pinned="true">
+                <h3>The Journeymen</h3>
+                <p>Men's work that inspired Tuesday Men's Club. A community of men supporting each other through life's transitions.</p>
+                <a href="https://www.journeymen.co/" target="_blank" class="link-button">Visit Journeymen →</a>
             </div>
 
         </div>
@@ -155,38 +162,45 @@
         // ============================================
         function randomizeFeed() {
             const feedContainer = document.getElementById('feed');
-            
-            // Collect all existing quote elements
-            const quoteElements = Array.from(document.querySelectorAll('[data-feed-item]'));
-            
+
+            // Separate pinned items from regular items
+            const allItems = Array.from(document.querySelectorAll('[data-feed-item]'));
+            const pinnedItems = allItems.filter(item => item.dataset.pinned === 'true');
+            const regularItems = allItems.filter(item => item.dataset.pinned !== 'true');
+
             // Get appropriate flyer images for this device
             const flyerImages = getFlyerImages();
-            
+
             // Create flyer elements
             const flyerElements = flyerImages.map(filename => {
                 const flyerDiv = document.createElement('div');
                 flyerDiv.className = 'feed-flyer';
                 flyerDiv.setAttribute('data-feed-item', '');
-                
+
                 const img = document.createElement('img');
                 img.src = `images/${filename}`;
                 img.alt = 'Tuesday Men\'s Club flyer';
-                
+
                 flyerDiv.appendChild(img);
                 return flyerDiv;
             });
-            
-            // Shuffle quotes and images separately first
-            const shuffledQuotes = shuffleArray(quoteElements);
+
+            // Shuffle regular quotes and images separately first
+            const shuffledQuotes = shuffleArray(regularItems);
             const shuffledImages = shuffleArray(flyerElements);
-            
+
             // Interleave them for better distribution
             const interleavedItems = interleaveItems(shuffledQuotes, shuffledImages);
-            
+
             // Clear the feed
             feedContainer.innerHTML = '';
-            
-            // Add interleaved items
+
+            // Add pinned items first (always at top)
+            pinnedItems.forEach(item => {
+                feedContainer.appendChild(item);
+            });
+
+            // Add interleaved regular items
             interleavedItems.forEach(item => {
                 feedContainer.appendChild(item);
             });

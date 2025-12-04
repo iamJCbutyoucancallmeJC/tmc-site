@@ -110,7 +110,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-image: url('images/hero-image_deskop.jpg');
+    background-image: url('images/hero-desktop.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -137,7 +137,7 @@ nav a:hover {
 }
 
 .session-info h3 {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -185,7 +185,7 @@ nav a:hover {
     margin-top: 60px;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #eee;
+    border-bottom: none;
 }
 
 .page-content h2:first-of-type {
@@ -196,17 +196,33 @@ nav a:hover {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 18px;
     line-height: 1.7;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .info-block {
     margin-bottom: 50px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+    border-bottom: none;
 }
 
 .info-block:last-child {
     border-bottom: none;
+}
+
+/* Next session highlight */
+.next-session {
+    color: #c41e3a;
+    font-weight: 600;
+}
+
+/* Bullet list indentation */
+.page-content ul {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.page-content ul li {
+    margin-bottom: 12px;
 }
 
 /* ============================================
@@ -307,6 +323,67 @@ nav a:hover {
     color: #3399ff;
     margin-bottom: 0.75rem;
     font-weight: 600;
+}
+
+/* LINK CARDS (Inspiration Page) */
+.feed-link {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+    border-left: 5px solid #333;
+    transition: transform 0.2s ease;
+}
+
+.feed-link h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feed-link p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.link-button:hover {
+    background: #555;
+}
+
+.feed-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Links page list styling */
+.links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.links-list li {
+    margin-bottom: 15px;
+}
+
+.links-list a {
+    font-weight: 600;
+    color: #333;
 }
 
 /* Hover effects */
@@ -423,9 +500,11 @@ nav a:hover {
     
     /* Hero */
     .hero {
-        background-image: url('images/hero-image_mobile.jpg');
+        background-image: url('images/hero-mobile.jpg');
         background-attachment: scroll;
-        background-position: center center;
+        background-position: left top;
+        background-size: 100% auto;
+        background-color: #1a1a1a;
     }
     
     .session-info {
@@ -470,9 +549,104 @@ nav a:hover {
     }
 }
 
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.contact-form button {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.contact-form button:hover {
+    background: #555;
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   UPCOMING SECTION (Homepage)
+   ============================================ */
+.upcoming-section {
+    position: absolute;
+    bottom: 80px;
+    right: 40px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    z-index: 10;
+    max-width: 350px;
+}
+
+.upcoming-section h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.upcoming-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.upcoming-section li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
 /* Even smaller screens */
 @media (max-width: 480px) {
     .feed-flyer img {
         max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .upcoming-section {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 20px;
+        max-width: none;
     }
 }
