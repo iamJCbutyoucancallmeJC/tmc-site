@@ -106,16 +106,17 @@ nav a:hover {
    ============================================ */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 56.25vw; /* Matches 16:9 image ratio - prevents vertical cropping */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     overflow: hidden;
     background-image: url('images/hero-image_deskop.jpg');
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
+    background-color: #1a1a1a;
 }
 
 .hero-image {
