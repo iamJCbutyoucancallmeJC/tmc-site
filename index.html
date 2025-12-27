@@ -12,6 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuesday Men's Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,6 +49,12 @@
 
     <!-- Hero Section with Background Image -->
     <section class="hero">
+        <!-- Text Overlays (rendered via CSS, not baked into image) -->
+        <div class="hero-text">
+            <h1 class="hero-title">Tuesday<br>Men's<br>Club</h1>
+            <p class="hero-tagline">Men of all ages,<br>join us.</p>
+        </div>
+
         <!-- Next Session Box -->
         <div class="session-info">
             <h3>Next Session</h3>
@@ -58,27 +67,9 @@
     </section>
 
     <script>
-        // Random hero image rotation
-        const desktopImages = [
-            'images/hero-desktop-wende-meeting.jpg',
-            'images/hero-desktop-suburban-watermelon.jpg',
-            'images/hero-desktop-crowd-bw.jpg'
-        ];
-        const mobileImages = [
-            'images/hero-mobile.jpg',
-            'images/hero-mobile-illustration.jpg',
-            'images/hero-mobile-crowd-bw.jpg'
-        ];
-
-        function setRandomHeroImage() {
-            const isMobile = window.innerWidth <= 768;
-            const images = isMobile ? mobileImages : desktopImages;
-            const randomImage = images[Math.floor(Math.random() * images.length)];
-            document.querySelector('.hero').style.backgroundImage = `url('${randomImage}')`;
-        }
-
-        // Set random image on page load
-        setRandomHeroImage();
+        // Hero image is now set via CSS (images/hero-wende-clean.png)
+        // Text overlays are HTML elements, not baked into the image
+        // To add more images in the future, add them to these arrays and uncomment the rotation code
 
         // Hamburger menu functionality
         const hamburger = document.getElementById('hamburger');
