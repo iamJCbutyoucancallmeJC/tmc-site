@@ -449,7 +449,7 @@ nav a:hover {
     .hero {
         background-image: url('images/hero-wende-clean.png');
         background-size: cover;
-        background-position: center;
+        background-position: 75% center; /* Shifted right to show more group, less JC */
     }
 
     .hero-text {
