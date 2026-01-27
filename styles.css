@@ -429,7 +429,7 @@ nav a:hover {
 /* ============================================
    RESPONSIVE / DESKTOP (explicit)
    ============================================ */
-@media (min-width: 769px) {
+@media (min-width: 481px) {
     nav .desktop-nav {
         display: flex !important;
     }
@@ -446,7 +446,7 @@ nav a:hover {
 /* ============================================
    RESPONSIVE / MOBILE
    ============================================ */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     /* Navigation */
     nav .desktop-nav {
         display: none;
@@ -528,7 +528,7 @@ nav a:hover {
 }
 
 /* Even smaller screens */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .feed-flyer img {
         max-height: 300px;
     }
