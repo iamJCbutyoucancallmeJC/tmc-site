@@ -427,6 +427,23 @@ nav a:hover {
 }
 
 /* ============================================
+   RESPONSIVE / DESKTOP (explicit)
+   ============================================ */
+@media (min-width: 769px) {
+    nav .desktop-nav {
+        display: flex !important;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* ============================================
    RESPONSIVE / MOBILE
    ============================================ */
 @media (max-width: 768px) {
