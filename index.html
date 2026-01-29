@@ -35,9 +35,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="details.html">Details</a></li>
             <li><a href="sessions.html">Sessions</a></li>
-            <li><a href="why.html">Why</a></li>
-            <li><a href="helpful-things.html">Inspiration</a></li>
-            <li><a href="links.html">Links</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
 
         <!-- Hamburger Menu -->
@@ -53,9 +51,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="details.html">Details</a></li>
                 <li><a href="sessions.html">Sessions</a></li>
-                <li><a href="why.html">Why</a></li>
-                <li><a href="helpful-things.html">Inspiration</a></li>
-                <li><a href="links.html">Links</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </nav>
@@ -87,10 +83,53 @@
 
     </section>
 
+    <!-- Email Signup Popup -->
+    <div class="email-popup-overlay" id="emailPopup">
+        <div class="email-popup">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <img src="" alt="Tuesday Men's Club" id="popupFlyer" class="popup-flyer">
+            <h3>Stay in the Loop</h3>
+            <p>Get occasional updates about Tuesday Men's Club.</p>
+            <form
+                action="https://buttondown.email/api/emails/embed-subscribe/tuesdaymensclub"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/tuesdaymensclub', 'popupwindow')"
+                class="embeddable-buttondown-form"
+            >
+                <input type="email" name="email" placeholder="Your email" required>
+                <input type="submit" value="Subscribe">
+            </form>
+            <p class="form-note"><em>No spam. Unsubscribe anytime.</em></p>
+        </div>
+    </div>
+
     <script>
-        // Hero image is now set via CSS (images/hero-wende-clean.png)
-        // Text overlays are HTML elements, not baked into the image
-        // To add more images in the future, add them to these arrays and uncomment the rotation code
+        // Mobile: play video once, then show still image (fallback already visible underneath)
+        const heroVideo = document.querySelector('.hero-video');
+        const isMobileDevice = window.innerWidth <= 480;
+
+        if (isMobileDevice && heroVideo) {
+            // Remove loop on mobile - play once
+            heroVideo.loop = false;
+
+            // When video ends, hide it to reveal fallback image
+            heroVideo.addEventListener('ended', function() {
+                heroVideo.classList.add('hidden');
+            });
+
+            // If video fails to load, hide it immediately
+            heroVideo.addEventListener('error', function() {
+                heroVideo.classList.add('hidden');
+            });
+
+            // If video stalls for too long, hide it
+            setTimeout(function() {
+                if (heroVideo.readyState < 3) {
+                    heroVideo.classList.add('hidden');
+                }
+            }, 5000);
+        }
 
         // Hamburger menu functionality
         const hamburger = document.getElementById('hamburger');
@@ -116,6 +155,51 @@
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
             }
+        });
+
+        // Random flyer selection for popup
+        const isMobile = window.innerWidth <= 768;
+        const flyerCount = 4;
+        const prefix = isMobile ? 'flyer_mobile_' : 'flyer_desktop_';
+
+        function getRandomFlyer() {
+            const num = Math.floor(Math.random() * flyerCount) + 1;
+            return `images/${prefix}${num}.jpeg`;
+        }
+
+        document.getElementById('popupFlyer').src = getRandomFlyer();
+
+        // Email popup with 45-second delay
+        const popup = document.getElementById('emailPopup');
+        const popupClose = document.getElementById('popupClose');
+        const POPUP_DISMISSED_KEY = 'tmc_popup_dismissed';
+        const DISMISS_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+        function shouldShowPopup() {
+            const dismissed = localStorage.getItem(POPUP_DISMISSED_KEY);
+            if (!dismissed) return true;
+            const dismissedTime = parseInt(dismissed, 10);
+            return Date.now() - dismissedTime > DISMISS_DURATION;
+        }
+
+        function showPopup() {
+            if (shouldShowPopup()) {
+                popup.classList.add('active');
+            }
+        }
+
+        function hidePopup() {
+            popup.classList.remove('active');
+            localStorage.setItem(POPUP_DISMISSED_KEY, Date.now().toString());
+        }
+
+        // Show popup after 45 seconds
+        setTimeout(showPopup, 45000);
+
+        // Close handlers
+        popupClose.addEventListener('click', hidePopup);
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) hidePopup();
         });
     </script>
 </body>

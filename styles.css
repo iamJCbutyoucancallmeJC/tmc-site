@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Bricolage Grotesque', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
@@ -134,7 +134,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/hero-wende-clean.png');
+    background-image: url('images/hero-mobile-still.jpeg');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -160,7 +160,7 @@ nav a:hover {
 }
 
 .hero-tagline {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(14px, 2.5vw, 22px);
     color: white;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
@@ -212,11 +212,11 @@ nav a:hover {
     padding: 80px 40px;
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .content-section h1, .content-section h2, .page-content h1, .page-content h2 {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #333;
     margin-bottom: 30px;
 }
@@ -227,14 +227,12 @@ nav a:hover {
 }
 
 .content-section h2, .page-content h2 {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #333;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #eee;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .page-content h2:first-of-type {
@@ -242,20 +240,24 @@ nav a:hover {
 }
 
 .page-content p, .page-content li {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 16px;
 }
 
 .info-block {
-    margin-bottom: 50px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
 }
 
-.info-block:last-child {
-    border-bottom: none;
+/* Indented lists */
+.page-content ul {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.page-content ul li {
+    margin-bottom: 8px;
 }
 
 /* ============================================
@@ -269,7 +271,7 @@ nav a:hover {
 }
 
 .testimonial blockquote {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-style: italic;
     line-height: 1.6;
@@ -278,7 +280,7 @@ nav a:hover {
 }
 
 .testimonial cite {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: #666;
 }
@@ -427,7 +429,7 @@ nav a:hover {
 }
 
 .reading-item h3 {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -435,7 +437,7 @@ nav a:hover {
 }
 
 .reading-item p {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 16px;
@@ -447,8 +449,6 @@ nav a:hover {
     color: #888;
     font-size: 16px;
     margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #ddd;
 }
 
 /* ============================================
@@ -460,12 +460,7 @@ nav a:hover {
 }
 
 .session-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.session-list li:last-child {
-    border-bottom: none;
+    padding: 8px 0;
 }
 
 .highlight-card {
@@ -477,7 +472,7 @@ nav a:hover {
 }
 
 .highlight-card blockquote {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-style: italic;
     line-height: 1.6;
@@ -486,7 +481,7 @@ nav a:hover {
 }
 
 .highlight-card cite {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #666;
     font-style: normal;
@@ -521,8 +516,7 @@ nav a:hover {
 }
 
 .field-trip-list li {
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    padding: 10px 0;
 }
 
 /* ============================================
@@ -546,7 +540,7 @@ nav a:hover {
     font-size: 16px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .embeddable-buttondown-form input[type="email"]:focus {
@@ -563,7 +557,7 @@ nav a:hover {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     transition: background 0.3s;
 }
 
@@ -623,14 +617,18 @@ nav a:hover {
         padding: 20px;
     }
 
-    /* Hero - use image fallback on mobile (video drains battery) */
-    .hero-video {
-        display: none;
-    }
-
+    /* Hero - fallback shows by default, video plays on top then hides */
     .hero-image-fallback {
         display: block;
-        background-position: 75% center; /* Shifted right to show more group, less JC */
+        background-position: 10% 10%;
+    }
+
+    .hero-video {
+        /* Video overlays the fallback, hides after one loop or on error */
+    }
+
+    .hero-video.hidden {
+        display: none;
     }
 
     .hero-text {
@@ -691,9 +689,198 @@ nav a:hover {
     }
 }
 
+/* ============================================
+   SESSION ENTRIES (Sessions Page)
+   ============================================ */
+.session-entry {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.session-entry:last-child {
+    border-bottom: none;
+}
+
+.session-highlight {
+    display: block;
+    color: #666;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/* ============================================
+   ABOUT PAGE CARDS
+   ============================================ */
+.testimonial-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff9933;
+}
+
+.testimonial-card blockquote {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 15px 0;
+}
+
+.testimonial-card cite {
+    font-weight: 600;
+    color: #666;
+    font-style: normal;
+}
+
+.quote-card {
+    background: #f0f4f8;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3399ff;
+}
+
+.quote-card blockquote {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+}
+
+.quote-card cite {
+    font-weight: 600;
+    color: #2874a6;
+    font-style: normal;
+}
+
+/* ============================================
+   EMAIL POPUP
+   ============================================ */
+.email-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-popup-overlay.active {
+    display: flex;
+}
+
+.email-popup {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.email-popup h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.email-popup p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.email-popup .embeddable-buttondown-form input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 12px;
+}
+
+.email-popup .embeddable-buttondown-form input[type="email"]:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.email-popup .embeddable-buttondown-form input[type="submit"] {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.3s;
+}
+
+.email-popup .embeddable-buttondown-form input[type="submit"]:hover {
+    background: #555;
+}
+
+.email-popup .form-note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-flyer {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 /* Even smaller screens */
 @media (max-width: 360px) {
     .feed-flyer img {
         max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .email-popup {
+        padding: 30px 25px;
+    }
+
+    .email-popup h3 {
+        font-size: 24px;
     }
 }
