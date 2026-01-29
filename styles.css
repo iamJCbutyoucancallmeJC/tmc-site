@@ -108,11 +108,36 @@ nav a:hover {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+}
+
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: cover;
+}
+
+/* Image fallback (shown on mobile or when video fails) */
+.hero-image-fallback {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('images/hero-wende-clean.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-color: #111;
+    z-index: 1;
 }
 
 /* Hero Text Overlays */
@@ -120,7 +145,7 @@ nav a:hover {
     position: absolute;
     top: 100px;
     left: 40px;
-    z-index: 5;
+    z-index: 10;
 }
 
 .hero-title {
@@ -155,7 +180,7 @@ nav a:hover {
     border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.2);
     color: white;
-    z-index: 10;
+    z-index: 15;
     max-width: 350px;
     font-size: 14px;
 }
@@ -427,6 +452,142 @@ nav a:hover {
 }
 
 /* ============================================
+   SESSIONS PAGE
+   ============================================ */
+.session-list {
+    list-style: none;
+    padding: 0;
+}
+
+.session-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.session-list li:last-child {
+    border-bottom: none;
+}
+
+.highlight-card {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #333;
+}
+
+.highlight-card blockquote {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.highlight-card cite {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    color: #666;
+    font-style: normal;
+}
+
+.session-archive h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 30px 0 15px 0;
+    color: #333;
+}
+
+.session-archive h3:first-child {
+    margin-top: 0;
+}
+
+.session-archive ul {
+    list-style: none;
+    padding: 0;
+}
+
+.session-archive li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Field Trips */
+.field-trip-list {
+    list-style: none;
+    padding: 0;
+}
+
+.field-trip-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* ============================================
+   EMAIL SIGNUP FORM
+   ============================================ */
+.email-signup {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.embeddable-buttondown-form .form-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.embeddable-buttondown-form input[type="email"] {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.embeddable-buttondown-form input[type="email"]:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.embeddable-buttondown-form input[type="submit"] {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    transition: background 0.3s;
+}
+
+.embeddable-buttondown-form input[type="submit"]:hover {
+    background: #555;
+}
+
+.form-note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+@media (max-width: 480px) {
+    .embeddable-buttondown-form .form-row {
+        flex-direction: column;
+    }
+
+    .embeddable-buttondown-form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* ============================================
    RESPONSIVE / DESKTOP (explicit)
    ============================================ */
 @media (min-width: 481px) {
@@ -451,21 +612,24 @@ nav a:hover {
     nav .desktop-nav {
         display: none;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     nav ul {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
     }
-    
-    /* Hero */
-    .hero {
-        background-image: url('images/hero-wende-clean.png');
-        background-size: cover;
+
+    /* Hero - use image fallback on mobile (video drains battery) */
+    .hero-video {
+        display: none;
+    }
+
+    .hero-image-fallback {
+        display: block;
         background-position: 75% center; /* Shifted right to show more group, less JC */
     }
 
