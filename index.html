@@ -58,15 +58,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Video Background -->
+    <!-- Hero Section with Background Image -->
     <section class="hero">
-        <!-- Video Background -->
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="video/hero-loop.mp4" type="video/mp4">
-        </video>
-        <!-- Fallback image for mobile / when video doesn't load -->
-        <div class="hero-image-fallback"></div>
-
         <!-- Text Overlays -->
         <div class="hero-text">
             <h1 class="hero-title">Tuesday<br>Men's<br>Club</h1>
@@ -107,32 +100,6 @@
     </div>
 
     <script>
-        // Mobile: play video once, then show still image (fallback already visible underneath)
-        const heroVideo = document.querySelector('.hero-video');
-        const isMobileDevice = window.innerWidth <= 480;
-
-        if (isMobileDevice && heroVideo) {
-            // Remove loop on mobile - play once
-            heroVideo.loop = false;
-
-            // When video ends, hide it to reveal fallback image
-            heroVideo.addEventListener('ended', function() {
-                heroVideo.classList.add('hidden');
-            });
-
-            // If video fails to load, hide it immediately
-            heroVideo.addEventListener('error', function() {
-                heroVideo.classList.add('hidden');
-            });
-
-            // If video stalls for too long, hide it
-            setTimeout(function() {
-                if (heroVideo.readyState < 3) {
-                    heroVideo.classList.add('hidden');
-                }
-            }, 5000);
-        }
-
         // Hamburger menu functionality
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
