@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Hidden preview page - not indexed -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB2KYQD69J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QB2KYQD69J');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuesday Men's Club - Preview</title>
+    <meta name="description" content="A men's group for LA-based men. We meditate, chat, and eat ice cream. Monthly sessions, launching weekly in February 2026.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul class="desktop-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="sessions.html">Sessions</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <!-- Video Background -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video/hero-loop.mp4" type="video/mp4">
+        </video>
+        <!-- Fallback image for mobile / when video doesn't load -->
+        <div class="hero-image-fallback"></div>
+
+        <!-- Text Overlays -->
+        <div class="hero-text">
+            <h1 class="hero-title">Tuesday<br>Men's<br>Club</h1>
+            <p class="hero-tagline">Men of all ages,<br>join us.</p>
+        </div>
+
+        <!-- Next Session Box -->
+        <div class="session-info">
+            <h3>Next Session</h3>
+            <p class="date">Tuesday, February 3, 2026</p>
+            <p>7:00pm - 8:30pm</p>
+            <p>Wende Museum, Culver City</p>
+            <p><strong>We meet every Tuesday in February!</strong></p>
+            <p><em>Drop-ins welcome. No experience necessary.</em></p>
+        </div>
+
+    </section>
+
+    <!-- Preview Notice -->
+    <div style="background: #f5f5f5; padding: 20px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif;">
+        <p style="margin: 0; color: #666;">
+            <strong>Preview Page</strong> - This video treatment is being shared for feedback before going public.
+        </p>
+    </div>
+
+    <script>
+        // Mobile: play video once, then show still image (fallback already visible underneath)
+        const heroVideo = document.querySelector('.hero-video');
+        const isMobileDevice = window.innerWidth <= 480;
+
+        if (isMobileDevice && heroVideo) {
+            // Remove loop on mobile - play once
+            heroVideo.loop = false;
+
+            // When video ends, hide it to reveal fallback image
+            heroVideo.addEventListener('ended', function() {
+                heroVideo.classList.add('hidden');
+            });
+
+            // If video fails to load, hide it immediately
+            heroVideo.addEventListener('error', function() {
+                heroVideo.classList.add('hidden');
+            });
+
+            // If video stalls for too long, hide it
+            setTimeout(function() {
+                if (heroVideo.readyState < 3) {
+                    heroVideo.classList.add('hidden');
+                }
+            }, 5000);
+        }
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
