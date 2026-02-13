@@ -885,3 +885,27 @@ nav a:hover {
         font-size: 24px;
     }
 }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #eee;
+}
+
+.site-footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #333;
+    text-decoration: underline;
+}
