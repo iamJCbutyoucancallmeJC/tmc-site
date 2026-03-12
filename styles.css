@@ -529,13 +529,14 @@ nav a:hover {
     padding: 30px;
 }
 
-.embeddable-buttondown-form .form-row {
+.signup-form .form-row {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
 
-.embeddable-buttondown-form input[type="email"] {
+.signup-form input[type="email"],
+.signup-form input[type="text"] {
     flex: 1;
     padding: 12px 15px;
     font-size: 16px;
@@ -544,12 +545,13 @@ nav a:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.embeddable-buttondown-form input[type="email"]:focus {
+.signup-form input[type="email"]:focus,
+.signup-form input[type="text"]:focus {
     outline: none;
     border-color: #333;
 }
 
-.embeddable-buttondown-form input[type="submit"] {
+.signup-form input[type="submit"] {
     padding: 12px 25px;
     font-size: 16px;
     font-weight: 600;
@@ -562,7 +564,7 @@ nav a:hover {
     transition: background 0.3s;
 }
 
-.embeddable-buttondown-form input[type="submit"]:hover {
+.signup-form input[type="submit"]:hover {
     background: #555;
 }
 
@@ -573,11 +575,11 @@ nav a:hover {
 }
 
 @media (max-width: 480px) {
-    .embeddable-buttondown-form .form-row {
+    .signup-form .form-row {
         flex-direction: column;
     }
 
-    .embeddable-buttondown-form input[type="submit"] {
+    .signup-form input[type="submit"] {
         width: 100%;
     }
 }
@@ -804,7 +806,8 @@ nav a:hover {
     line-height: 1.5;
 }
 
-.email-popup .embeddable-buttondown-form input[type="email"] {
+.email-popup .signup-form input[type="email"],
+.email-popup .signup-form input[type="text"] {
     width: 100%;
     padding: 14px 16px;
     font-size: 16px;
@@ -814,12 +817,13 @@ nav a:hover {
     margin-bottom: 12px;
 }
 
-.email-popup .embeddable-buttondown-form input[type="email"]:focus {
+.email-popup .signup-form input[type="email"]:focus,
+.email-popup .signup-form input[type="text"]:focus {
     outline: none;
     border-color: #333;
 }
 
-.email-popup .embeddable-buttondown-form input[type="submit"] {
+.email-popup .signup-form input[type="submit"] {
     width: 100%;
     padding: 14px 20px;
     font-size: 16px;
@@ -833,7 +837,7 @@ nav a:hover {
     transition: background 0.3s;
 }
 
-.email-popup .embeddable-buttondown-form input[type="submit"]:hover {
+.email-popup .signup-form input[type="submit"]:hover {
     background: #555;
 }
 
