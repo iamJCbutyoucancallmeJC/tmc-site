@@ -69,17 +69,17 @@
         <div class="info-block email-signup" id="email-signup">
             <h2>Let us know you're coming</h2>
             <p>Leave your name and email and we'll send you details before each session.</p>
-            <form action="https://app.kit.com/forms/9196517/subscriptions" method="post" class="signup-form">
-                <div class="form-row">
-                    <input type="text" name="fields[first_name]" placeholder="First name" required>
-                    <input type="text" name="fields[last_name]" placeholder="Last name" required>
-                </div>
-                <div class="form-row">
-                    <input type="email" name="email_address" placeholder="Your email" required>
-                    <input type="submit" value="Sign Up">
-                </div>
-                <p class="form-note"><em>No spam. You can unsubscribe anytime.</em></p>
+            <form
+                action="https://buttondown.com/api/emails/embed/subscribe"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.com/tuesdaymensclub', 'popupwindow')"
+                class="embeddable-buttondown-form"
+            >
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <input type="submit" value="Let us know you're coming">
             </form>
+            <p class="form-note"><em>No spam. You can unsubscribe anytime.</em></p>
         </div>
 
         <div class="info-block">
