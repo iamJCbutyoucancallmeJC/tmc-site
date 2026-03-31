@@ -20,44 +20,46 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-<nav>
-    <ul class="desktop-nav">
-        <!-- Keep your existing nav links exactly as they are -->
-        <li><a href="details.html">Details</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="materials.html">Materials</a></li>
-        <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
-    </ul>
-    
-    <!-- Add this hamburger menu -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    
-    <!-- Add this mobile menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <!-- Duplicate your nav links here -->
+    <nav>
+        <ul class="desktop-nav">
+            <li><a href="index.html">Home</a></li>
             <li><a href="details.html">Details</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="materials.html">Materials</a></li>
-            <li><a href="http://thecaliforniawalk.com/">Other fun stuff</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
         </ul>
-    </div>
-</nav>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="sessions.html">Sessions</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Content -->
     <section class="page-content">
         <h1>What People Say</h1>
-        
+
         <div class="testimonial">
             <blockquote>
-                " What a beautiful space the Tuesday Men’s Club is for me to feel seen and heard in the presence of a group of caring, thoughtful men. This space has provided me the opportunity to take a chance on being vulnerable in a group of strangers and has consistently rewarded me with affirmation, connection, and support. I feel lucky to be a part of this group and am grateful for JC and the Wende for making this group happen."
+                " What a beautiful space the Tuesday Men's Club is for me to feel seen and heard in the presence of a group of caring, thoughtful men. This space has provided me the opportunity to take a chance on being vulnerable in a group of strangers and has consistently rewarded me with affirmation, connection, and support. I feel lucky to be a part of this group and am grateful for JC and the Wende for making this group happen."
             </blockquote>
             <cite>— Derek</cite>
         </div>
@@ -70,16 +72,17 @@
         </div>
 
     </section>
+
     <script>
         // Hamburger menu functionality
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
-        
+
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
         });
-        
+
         // Close mobile menu when clicking on a link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
@@ -88,7 +91,7 @@
                 mobileMenu.classList.remove('active');
             });
         });
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
@@ -96,12 +99,7 @@
                 mobileMenu.classList.remove('active');
             }
         });
-        </script>
-        <footer class="site-footer">
-  <p>A <a href="https://jccangilla.com">JC Cangilla</a> project</p>
-</footer>
-</body>
-        </html>
+    </script>
 <footer class="site-footer">
   <p>A <a href="https://jccangilla.com">JC Cangilla</a> project</p>
 </footer>

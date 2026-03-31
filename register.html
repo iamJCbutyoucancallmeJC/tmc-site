@@ -60,21 +60,22 @@
         <div class="info-block">
             <h2>Tuesday Men's Club</h2>
             <p>We meet the 1st and 3rd Tuesdays of each month at 7:00pm at the Wende Museum in Culver City. Open to all men.</p>
-            <p><strong>Next session: Tuesday, Tuesday, April 7, 2026</strong><br>
+            <p><strong>Next session: Tuesday, April 7, 2026</strong><br>
             7:00pm &ndash; 8:30pm<br>
             Wende Museum, 10808 Culver Blvd, Culver City, CA</p>
         </div>
 
-        <!-- Kit Registration Form -->
+        <!-- Registration Form (Google Sheets) -->
         <div class="info-block email-signup" id="email-signup">
             <h2>Let us know you're coming</h2>
             <p>Leave your name and email and we'll send you details before each session.</p>
-            <form action="https://app.kit.com/forms/9196517/subscriptions" method="post" class="signup-form">
-                <input type="text" name="fields[first_name]" placeholder="First name" required>
-                <input type="text" name="fields[last_name]" placeholder="Last name" required>
-                <input type="email" name="email_address" placeholder="Your email" required>
+            <form id="signup-form" class="signup-form">
+                <input type="text" name="first_name" placeholder="First name" required>
+                <input type="text" name="last_name" placeholder="Last name" required>
+                <input type="email" name="email" placeholder="Your email" required>
                 <input type="submit" value="Sign Up">
             </form>
+            <p id="form-success" style="display:none; color: #2a7a2a; font-weight: 600;">Thanks! We'll be in touch before the next session.</p>
             <p class="form-note"><em>No spam. You can unsubscribe anytime.</em></p>
         </div>
 
@@ -108,6 +109,30 @@
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
             }
+        });
+
+        // Google Sheets signup form
+        const signupForm = document.getElementById('signup-form');
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = signupForm.querySelector('input[type="submit"]');
+            btn.value = 'Sending...';
+            btn.disabled = true;
+
+            const data = new URLSearchParams(new FormData(signupForm));
+            fetch('https://script.google.com/macros/s/AKfycbxJ1W0TR0xsVmIG0JxAVpwX0NbVeD2Qch3MB-kgiZtzgrpgbZnloXus_cbMAAKf5m5g/exec', {
+                method: 'POST',
+                body: data
+            })
+            .then(() => {
+                signupForm.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+            })
+            .catch(() => {
+                btn.value = 'Sign Up';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            });
         });
     </script>
 <footer class="site-footer">
