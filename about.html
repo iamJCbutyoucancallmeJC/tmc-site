@@ -157,12 +157,13 @@
             <img src="" alt="Tuesday Men's Club" id="popupFlyer" class="popup-flyer">
             <h3>Stay in the Loop</h3>
             <p>Get occasional updates about Tuesday Men's Club.</p>
-            <form action="https://app.kit.com/forms/9196517/subscriptions" method="post" class="signup-form">
-                <input type="text" name="fields[first_name]" placeholder="First name" required>
-                <input type="text" name="fields[last_name]" placeholder="Last name" required>
-                <input type="email" name="email_address" placeholder="Your email" required>
+            <form id="popup-signup-form" class="signup-form">
+                <input type="text" name="first_name" placeholder="First name" required>
+                <input type="text" name="last_name" placeholder="Last name" required>
+                <input type="email" name="email" placeholder="Your email" required>
                 <input type="submit" value="Sign Up">
             </form>
+            <p id="popup-form-success" style="display:none; color: #2a7a2a; font-weight: 600;">Thanks! We'll be in touch before the next session.</p>
             <p class="form-note"><em>No spam. Unsubscribe anytime.</em></p>
         </div>
     </div>
@@ -239,6 +240,30 @@
         popupClose.addEventListener('click', hidePopup);
         popup.addEventListener('click', function(e) {
             if (e.target === popup) hidePopup();
+        });
+
+        // Google Sheets signup form (popup)
+        const popupSignupForm = document.getElementById('popup-signup-form');
+        popupSignupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = popupSignupForm.querySelector('input[type="submit"]');
+            btn.value = 'Sending...';
+            btn.disabled = true;
+
+            const data = new URLSearchParams(new FormData(popupSignupForm));
+            fetch('https://script.google.com/macros/s/AKfycbxJ1W0TR0xsVmIG0JxAVpwX0NbVeD2Qch3MB-kgiZtzgrpgbZnloXus_cbMAAKf5m5g/exec', {
+                method: 'POST',
+                body: data
+            })
+            .then(() => {
+                popupSignupForm.style.display = 'none';
+                document.getElementById('popup-form-success').style.display = 'block';
+            })
+            .catch(() => {
+                btn.value = 'Sign Up';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            });
         });
     </script>
 <footer class="site-footer">
