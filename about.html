@@ -255,11 +255,15 @@
                 method: 'POST',
                 body: data
             })
-            .then(() => {
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('HTTP ' + res.status + ' ' + res.statusText);
+                }
                 popupSignupForm.style.display = 'none';
                 document.getElementById('popup-form-success').style.display = 'block';
             })
-            .catch(() => {
+            .catch(err => {
+                console.error('TMC popup signup submit failed', err);
                 btn.value = 'Sign Up';
                 btn.disabled = false;
                 alert('Something went wrong. Please try again.');

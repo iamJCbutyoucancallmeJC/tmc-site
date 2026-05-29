@@ -151,11 +151,15 @@
                 method: 'POST',
                 body: data
             })
-            .then(() => {
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('HTTP ' + res.status + ' ' + res.statusText);
+                }
                 signupForm.style.display = 'none';
                 document.getElementById('form-success').style.display = 'block';
             })
-            .catch(() => {
+            .catch(err => {
+                console.error('TMC signup submit failed', err);
                 btn.value = 'Sign Up';
                 btn.disabled = false;
                 alert('Something went wrong. Please try again.');
