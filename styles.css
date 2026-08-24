@@ -206,6 +206,14 @@ nav a:hover {
     margin-bottom: 6px;
 }
 
+.session-info .fall-dates {
+    border-top: 1px solid rgba(255,255,255,0.28);
+    margin-top: 14px;
+    padding-top: 12px;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
 /* ============================================
    CONTENT SECTIONS
    ============================================ */

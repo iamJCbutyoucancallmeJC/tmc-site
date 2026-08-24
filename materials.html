@@ -1,132 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB2KYQD69J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QB2KYQD69J');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materials - Tuesday Men's Club</title>
-    <meta name="description" content="Session materials for Tuesday Men's Club members.">
-    <meta property="og:title" content="Materials - Tuesday Men's Club">
-    <meta property="og:url" content="https://tuesdaymensclub.com/materials.html">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://tuesdaymensclub.com/about.html">
+    <meta http-equiv="refresh" content="0; url=about.html">
+    <script>window.location.replace("about.html");</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul class="desktop-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="details.html">Details</a></li>
-            <li><a href="why.html">Why</a></li>
-            <li><a href="helpful-things.html">Inspiration</a></li>
-            <li><a href="links.html">Links</a></li>
-        </ul>
-
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="details.html">Details</a></li>
-                <li><a href="why.html">Why</a></li>
-                <li><a href="helpful-things.html">Inspiration</a></li>
-                <li><a href="links.html">Links</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Content -->
-    <section class="page-content">
-        <h1>Materials</h1>
-
-        <div class="info-block">
-            <h2>Slogan: Abandon Any Hope of Fruition</h2>
-            <p>"Fruition" implies that at some future time you will feel good. One of the most powerful Buddhist teachings is that as long as you are wishing for things to change, they never will. As long as you're wanting yourself to get better, you won't. As long as you are oriented toward the future, you can never just relax into what you already have or already are.</p>
-
-            <p>One of the deepest habitual patterns that we have is the feeling that the present moment is not good enough. We frequently think back to the past, which maybe was better than now, or perhaps worse. We also think ahead quite a bit to the future, always holding out hope that it will be a little bit better than now. Even if things are going really well now, we usually don't give ourselves full credit for who we are in the present.</p>
-
-            <p>For example, it's easy to hope that things will improve as a result of meditation: we won't have such a bad temper anymore or we won't be afraid anymore or people will like us more than they do now. Or perhaps we will fully connect with that awake, brilliant, sacred world that we hope to find. We use our practice to reinforce the implication that if we just did the right things, we'd begin to connect with a bigger world, a vaster world, a world different from the one we're in now.</p>
-
-            <p>Instead of looking for fruition, we could just try to stay with our open heart and open mind. This is very much oriented to the present. By entering into this kind of unconditional relationship with ourselves, we can begin to connect with the awake quality that we already have.</p>
-
-            <p>Right now, can you make an unconditional relationship with yourself? Just at the height you are, the weight you are, with the intelligence that you have, and your current burden of pain? Can you enter into an unconditional relationship with that?</p>
-
-            <p><em>— Pema Chödrön, American Buddhist Nun</em></p>
-        </div>
-
-        <div class="info-block">
-            <h2>Caretake This Moment</h2>
-            <p>Caretake this moment. Immerse yourself in its particulars. Respond to this person, this challenge, this deed.</p>
-
-            <p><em>Quit the evasions.</em> Stop giving yourself needless trouble. <em>It is time to really live;</em> to fully inhabit the situation you happen to be in now. You are not some disinterested bystander. Exert yourself.</p>
-
-            <p>When your doors are shut and your room is dark you are not alone. The will of nature is within you as your natural genius is within. Listen to its importunings. Follow its directives.</p>
-
-            <p>As concerns the art of living, the material is your own life. No great thing is created suddenly. There must be time.</p>
-
-            <p>Give your best and always be kind.</p>
-
-            <p><em>— Epictetus, Greek philosopher born 50 AD in Turkey</em></p>
-        </div>
-
-        <div class="info-block">
-            <h2>It's what I live for.</h2>
-            <p><em>— Uncle Erwin</em></p>
-        </div>
-    </section>
-
-    <script>
-        // Hamburger menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            }
-        });
-    </script>
-<footer class="site-footer">
-  <p class="footer-network" style="margin-top:10px; font-size:12px;">
-    <span style="text-transform:uppercase; letter-spacing:0.04em;">Elsewhere</span>&nbsp;
-    <a href="https://linslow.com">Linslow</a> &middot;
-    <a href="https://jccangilla.com">jccangilla.com</a> &middot;
-    <a href="https://thecaliforniawalk.com">The California Walk</a> &middot;
-    <a href="https://ssdg.me">SSDG</a>
-  </p>
-</footer>
+    <p style="font-family: sans-serif; padding: 2rem;">Taking you to About Tuesday Men's Club&hellip; If nothing happens, <a href="about.html">tap here</a>.</p>
 </body>
 </html>
