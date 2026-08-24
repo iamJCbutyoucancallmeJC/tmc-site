@@ -210,8 +210,25 @@ nav a:hover {
     border-top: 1px solid rgba(255,255,255,0.28);
     margin-top: 14px;
     padding-top: 12px;
-    font-size: 12px;
-    line-height: 1.55;
+}
+
+.session-info .fall-dates strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.fall-date-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fall-date-list li {
+    margin: 0;
+    font-size: clamp(16px, 1.2vw, 17px);
+    font-weight: 600;
+    line-height: 1.35;
 }
 
 /* ============================================
@@ -632,6 +649,10 @@ nav a:hover {
     .hero-image-fallback {
         display: block;
         background-position: 10% 10%;
+    }
+
+    .hero {
+        min-height: 800px;
     }
 
     .hero-video {
