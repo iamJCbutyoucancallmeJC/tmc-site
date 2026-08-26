@@ -654,6 +654,8 @@ nav a:hover {
 
     .hero {
         min-height: 720px;
+        background-image: url('images/hero-mobile-still.jpeg');
+        background-position: center 30%;
     }
 
     .hero-video {
@@ -671,7 +673,7 @@ nav a:hover {
     }
 
     .hero-title {
-        font-size: clamp(44px, 14vw, 72px);
+        font-size: clamp(56px, 18vw, 80px);
     }
 
     .hero-tagline {
