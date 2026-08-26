@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -161,12 +161,12 @@ nav a:hover {
 }
 
 .hero-tagline {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: clamp(14px, 2vw, 20px);
     color: white;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     margin-top: 15px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Session Info Box */
@@ -175,12 +175,12 @@ nav a:hover {
     bottom: clamp(20px, 8vh, 80px);
     right: clamp(20px, 5vw, 60px);
     left: auto;
-    background: rgba(255,255,255,0.15);
+    background: rgba(250,246,239,0.93);
     backdrop-filter: blur(15px);
     padding: 15px 20px;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
+    border: 1px solid rgba(212,72,47,0.18);
+    color: #2B2823;
     z-index: 15;
     max-width: clamp(260px, 25vw, 320px);
     font-size: clamp(12px, 1.2vw, 14px);
@@ -190,12 +190,14 @@ nav a:hover {
     font-size: clamp(16px, 1.5vw, 18px);
     margin-bottom: 10px;
     font-weight: 700;
+    color: #D4482F;
 }
 
 .session-info .date {
     font-size: clamp(14px, 1.3vw, 16px);
-    font-weight: 600;
-    background: rgba(255,255,255,0.2);
+    font-weight: 700;
+    color: #D4482F;
+    background: rgba(212,72,47,0.10);
     padding: 3px 8px;
     border-radius: 6px;
     display: inline-block;
@@ -207,15 +209,14 @@ nav a:hover {
 }
 
 .session-info .fall-dates {
-    border-top: 1px solid rgba(255,255,255,0.28);
-    margin-top: 14px;
-    padding-top: 12px;
+    margin-top: 18px;
 }
 
 .session-info .fall-dates strong {
     display: block;
     margin-bottom: 6px;
     font-size: 15px;
+    color: #D4482F;
 }
 
 .fall-date-list {
@@ -238,11 +239,11 @@ nav a:hover {
     padding: 80px 40px;
     max-width: 800px;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
 }
 
 .content-section h1, .content-section h2, .page-content h1, .page-content h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     color: #333;
     margin-bottom: 30px;
 }
@@ -253,7 +254,7 @@ nav a:hover {
 }
 
 .content-section h2, .page-content h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #333;
@@ -266,7 +267,7 @@ nav a:hover {
 }
 
 .page-content p, .page-content li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 16px;
@@ -297,7 +298,7 @@ nav a:hover {
 }
 
 .testimonial blockquote {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 20px;
     font-style: italic;
     line-height: 1.6;
@@ -306,7 +307,7 @@ nav a:hover {
 }
 
 .testimonial cite {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-weight: 600;
     color: #666;
 }
@@ -455,7 +456,7 @@ nav a:hover {
 }
 
 .reading-item h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -463,7 +464,7 @@ nav a:hover {
 }
 
 .reading-item p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 16px;
@@ -498,7 +499,7 @@ nav a:hover {
 }
 
 .highlight-card blockquote {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 18px;
     font-style: italic;
     line-height: 1.6;
@@ -507,7 +508,7 @@ nav a:hover {
 }
 
 .highlight-card cite {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 14px;
     color: #666;
     font-style: normal;
@@ -567,7 +568,7 @@ nav a:hover {
     font-size: 16px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
 }
 
 .signup-form input[type="email"]:focus,
@@ -585,7 +586,7 @@ nav a:hover {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     transition: background 0.3s;
 }
 
@@ -820,7 +821,7 @@ nav a:hover {
 }
 
 .email-popup h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -828,7 +829,7 @@ nav a:hover {
 }
 
 .email-popup p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
@@ -842,7 +843,7 @@ nav a:hover {
     font-size: 16px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     margin-bottom: 12px;
 }
 
@@ -862,7 +863,7 @@ nav a:hover {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     transition: background 0.3s;
 }
 
@@ -927,7 +928,7 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 14px;
     color: #888;
     border-top: 1px solid #eee;
@@ -953,15 +954,15 @@ nav a:hover {
     padding: 10px 22px;
     font-size: 15px;
     font-weight: 700;
-    background: white;
-    color: #111;
+    background: #D4482F;
+    color: #fff;
     border-radius: 8px;
     text-decoration: none;
     transition: background 0.3s;
 }
 
 .rsvp-button:hover {
-    background: #e8e8e8;
+    background: #A83722;
 }
 
 .luma-embed {
