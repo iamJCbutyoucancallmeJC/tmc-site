@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "site": {
+    "name": "Tuesday Men's Club",
+    "url": "https://tuesdaymensclub.com",
+    "home": "/"
+  },
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "title": "The fall list drops September 1",
+      "summary": "Once a session has met, its date leaves the list. The strip always reads forward."
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Swan Song on the phone",
+      "summary": "The mobile hero is George Byrne’s Swan Song, matching the session card and Luma. Desktop keeps the chairs; the credit sits in the footer, mobile only.",
+      "options": [
+        { "key": "H1", "title": "The huddle still, bigger title", "picked": "picked 8/26, superseded", "blurb": "The orphaned purpose-shot mobile asset; the title up to 18vw." },
+        { "key": "H2", "title": "Swan Song", "picked": "picked 8/26", "blurb": "One image across the card, the calendar, and the phone." }
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "title": "The session card in the house palette; Bricolage everywhere",
+      "summary": "Cream ground, dark text, red accents; the divider rule goes. Arial gives way to Bricolage Grotesque site-wide, matching the flyers."
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Men, join us.",
+      "summary": "The tagline. The fall run extends through December 15."
+    },
+    {
+      "date": "2026-08-24",
+      "title": "The fall schedule, on the homepage",
+      "summary": "A plain static list of the fall run near the Next Session box: scannable, and it survives iframe-blocking. The meta description stops saying February.",
+      "important": true,
+      "note": "Content refresh, not rethink.",
+      "options": [
+        { "key": "A", "title": "Front the fall schedule", "picked": "picked 8/24", "blurb": "Static text is what search and link previews actually read." },
+        { "key": "B", "title": "Prune the drifted pages", "picked": "picked 8/24", "blurb": "Retire why, helpful-things, links, materials, sessions behind redirects; refresh field-trips instead of pruning it." },
+        { "key": "C", "title": "Refresh testimonials", "picked": "picked 8/24", "blurb": "Fold into About; source new quotes from the S36 asks-and-offers." },
+        { "key": "D", "title": "Tell the sixteen-months story", "picked": "picked 8/24, later turned off", "blurb": "One story, one home, linked from About." }
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Prune the drifted pages",
+      "summary": "why, helpful-things, links, materials, and sessions retire behind redirects. Field trips is refreshed as its own home instead of pruned."
+    },
+    {
+      "date": "2026-08-10",
+      "title": "Register is the Luma page",
+      "summary": "Register goes to the Luma calendar site-wide; register.html becomes an instant redirect so old links and QR codes keep working. The email list stays its own door."
+    },
+    {
+      "date": "2026-08-04",
+      "title": "RSVP on the hero; the calendar on Details",
+      "summary": "The hand-edited Upcoming lists give way to the self-updating Luma embed. An RSVP button on the session box, patched per session."
+    },
+    {
+      "date": "2026-08-03",
+      "title": "TMC keeps a plain-text Elsewhere row",
+      "summary": "The tile row the other sites took is reverted here to a line of words. “A JC Cangilla project” goes.",
+      "important": true,
+      "note": "TMC doesn’t need any of these.",
+      "options": [
+        { "key": "E1", "title": "The tile row, like the other sites", "blurb": "Borrowed faces for each property." },
+        { "key": "E2", "title": "A line of words", "picked": "picked 8/3", "blurb": "The poster site stays a poster." }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "title": "The Sessions page leaves the nav",
+      "summary": "Kept at its URL, out of the nav. Summer Wende sessions added; the spring flyer comes down."
+    },
+    {
+      "date": "2026-06-11",
+      "title": "The homepage form writes to a sheet",
+      "summary": "The dead Kit popup is replaced with a Google Sheets endpoint. The roster of record stays the sheet."
+    },
+    {
+      "date": "2026-06-04",
+      "title": "Elsewhere joins the footer",
+      "summary": "A row linking the other four properties on every page, where before there was only an attribution line."
+    }
+  ]
+}
