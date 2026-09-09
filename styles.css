@@ -933,7 +933,8 @@ nav a:hover {
     text-align: center;
     font-family: 'Bricolage Grotesque', Arial, sans-serif;
     font-size: 14px;
-    color: #888;
+    /* Same 4.5:1 floor as .site-footer a below: #888 is 3.5:1 on white. */
+    color: #6f6f6f;
     border-top: 1px solid #eee;
 }
 
