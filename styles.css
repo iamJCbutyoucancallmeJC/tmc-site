@@ -938,7 +938,10 @@ nav a:hover {
 }
 
 .site-footer a {
-    color: #888;
+    /* #888 is 3.5:1 on white, under the 4.5:1 axe floor; #6f6f6f is 5.0:1.
+       Every footer link failed, but it only became a NEW weekly finding when
+       the changelog link joined the row (site-qa 2026-09-08, 24 -> 25). */
+    color: #6f6f6f;
     text-decoration: none;
 }
 
