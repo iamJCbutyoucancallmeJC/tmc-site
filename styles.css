@@ -646,48 +646,65 @@ nav a:hover {
         padding: 20px;
     }
 
-    /* Hero - fallback shows by default, video plays on top then hides */
-    .hero-image-fallback {
-        display: block;
-        background-position: 10% 10%;
-    }
-
+    /* Hero (phone): a photo band with the title on it, then the Next Session
+       box BELOW it in normal flow. Nothing sits on top of the photo (Sep 2026:
+       the box, grown by the fall date list, was covering the bottom half). */
     .hero {
-        min-height: 720px;
-        background-image: url('images/hero-mobile-swansong.jpg');
+        height: auto;
+        min-height: 0;
+        background-image: none;
+        background-color: #FAF6EF;
+    }
+
+    .hero::before {
+        content: '';
+        display: block;
+        height: 62vh;
+        min-height: 440px;
+        max-height: 640px;
+        background-image: url('images/hero-mobile-wafflehouse.jpg');
         background-size: cover;
-        background-position: 63% 40%;
-    }
-
-    .hero-video {
-        /* Video overlays the fallback, hides after one loop or on error */
-    }
-
-    .hero-video.hidden {
-        display: none;
+        background-position: 50% 40%;
     }
 
     .hero-text {
-        top: 80px;
+        top: 72px;
         left: 20px;
         right: 20px;
     }
 
+    /* Waffle House is a pale-ground image: red type, as on the Luma cover. */
     .hero-title {
         font-size: clamp(56px, 18vw, 80px);
+        color: #C8102E;
+        text-shadow: none;
     }
 
     .hero-tagline {
         font-size: clamp(14px, 4vw, 20px);
         margin-top: 12px;
+        color: #C8102E;
+        text-shadow: none;
+        display: inline-block;
+        padding: 6px 10px;
+        background: rgba(250,246,239,0.88);
+        border-radius: 6px;
     }
 
     .session-info {
-        left: 20px;
-        right: 20px;
-        bottom: 30px;
-        padding: 18px;
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: 0;
+        padding: 22px 20px 28px;
         max-width: none;
+        font-size: 14px;
+        background: #FAF6EF;
+        backdrop-filter: none;
+        border: 0;
+        border-top: 1px solid rgba(212,72,47,0.18);
+        border-radius: 0;
     }
     
     /* Content */

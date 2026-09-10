@@ -7,6 +7,15 @@
   },
   "entries": [
     {
+      "date": "2026-09-10",
+      "title": "Waffle House on the phone; the box steps off the photo",
+      "summary": "The mobile hero is Micah Cash’s Huntersville booth, matching the S37 card and Luma; red type on the pale ground, as on the cover. The Next Session box, grown tall by the fall list, sits below the photo instead of over it.",
+      "options": [
+        { "key": "H1", "title": "Shrink the box", "blurb": "Hide the fall list on phones and keep the box floating over the photo." },
+        { "key": "H2", "title": "The box below the photo", "picked": "picked 9/10", "blurb": "The photo gets the top of the screen to itself; the box follows in its own cream band." }
+      ]
+    },
+    {
       "date": "2026-09-01",
       "title": "The fall list drops September 1",
       "summary": "Once a session has met, its date leaves the list. The strip always reads forward."
