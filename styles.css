@@ -160,15 +160,6 @@ nav a:hover {
     letter-spacing: -2px;
 }
 
-.hero-tagline {
-    font-family: 'Bricolage Grotesque', Arial, sans-serif;
-    font-size: clamp(14px, 2vw, 20px);
-    color: white;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    margin-top: 15px;
-    font-weight: 600;
-}
-
 /* Session Info Box */
 .session-info {
     position: absolute;
@@ -678,17 +669,6 @@ nav a:hover {
         font-size: clamp(56px, 18vw, 80px);
         color: #C8102E;
         text-shadow: none;
-    }
-
-    .hero-tagline {
-        font-size: clamp(14px, 4vw, 20px);
-        margin-top: 12px;
-        color: #C8102E;
-        text-shadow: none;
-        display: inline-block;
-        padding: 6px 10px;
-        background: rgba(250,246,239,0.88);
-        border-radius: 6px;
     }
 
     .session-info {
