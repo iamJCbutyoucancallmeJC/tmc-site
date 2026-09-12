@@ -23,6 +23,7 @@
   display: flex;
   height: 76px;
   min-height: 76px;
+  max-height: 76px;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -51,6 +52,7 @@
 .network-tiles--wall .network-tile {
   height: 150px;
   min-height: 150px;
+  max-height: 150px;
 }
 
 .network-tile.tile-jcc {
