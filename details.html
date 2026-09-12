@@ -24,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/network-tiles/network-tiles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -163,13 +164,15 @@
         });
     </script>
 <footer class="site-footer">
-  <p class="footer-network" style="margin-top:10px; font-size:12px;">
-    <span style="text-transform:uppercase; letter-spacing:0.04em;">Elsewhere</span>&nbsp;
-    <a href="https://linslow.com">Linslow</a> &middot;
-    <a href="https://jccangilla.com">jccangilla.com</a> &middot;
-    <a href="https://thecaliforniawalk.com">The California Walk</a> &middot;
-    <a href="https://ssdg.me">SSDG</a>
-  </p>
+  <div class="footer-network">
+    <span class="network-tiles-label">Elsewhere</span>
+    <div class="network-tiles">
+      <a class="tile network-tile tile-linslow" data-network-tile="linslow" href="https://linslow.com" aria-label="Linslow Industries"><span class="linslow-mark">// linslow industries</span></a>
+      <a class="tile network-tile tile-jcc" data-network-tile="jcc" href="https://jccangilla.com" aria-label="JC Cangilla"><span class="jcc-name">JC Cangilla</span><span class="jcc-sig">Building...</span></a>
+      <a class="tile network-tile tile-cawalk" data-network-tile="cawalk" href="https://thecaliforniawalk.com" aria-label="The California Walk"><img src="/network-tiles/california-walk-wordmark.png" alt="" width="680" height="70"></a>
+      <a class="tile network-tile tile-ssdg" data-network-tile="ssdg" href="https://ssdg.me" aria-label="Short Story Discussion Group"><span class="ssdg-head">DATE DUE</span><span class="ssdg-dbl"></span><span class="ssdg-line">Short Story</span><span class="ssdg-line">Discussion Group</span><span class="ssdg-line"></span><span class="ssdg-id">SSDG &middot; EST. 2022</span></a>
+    </div>
+  </div>
   <p class="footer-changelog" style="margin-top:6px; font-size:12px;"><a href="/changelog/">How this site got the way it is</a></p>
 </footer>
 </body>

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "tiles": [
+    {
+      "id": "jcc",
+      "href": "https://jccangilla.com",
+      "label": "JC Cangilla",
+      "html": "<span class=\"jcc-name\">JC Cangilla</span><span class=\"jcc-sig\">Building...</span>"
+    },
+    {
+      "id": "linslow",
+      "href": "https://linslow.com",
+      "label": "Linslow Industries",
+      "html": "<span class=\"linslow-mark\">// linslow industries</span>"
+    },
+    {
+      "id": "tmc",
+      "href": "https://tuesdaymensclub.com",
+      "label": "Tuesday Men's Club",
+      "html": "<span class=\"tmc-mark\">Tuesday<br>Men&rsquo;s<br>Club</span>"
+    },
+    {
+      "id": "cawalk",
+      "href": "https://thecaliforniawalk.com",
+      "label": "The California Walk",
+      "html": "<img src=\"/network-tiles/california-walk-wordmark.png\" alt=\"\" width=\"680\" height=\"70\">"
+    },
+    {
+      "id": "ssdg",
+      "href": "https://ssdg.me",
+      "label": "Short Story Discussion Group",
+      "html": "<span class=\"ssdg-head\">DATE DUE</span><span class=\"ssdg-dbl\"></span><span class=\"ssdg-line\">Short Story</span><span class=\"ssdg-line\">Discussion Group</span><span class=\"ssdg-line\"></span><span class=\"ssdg-id\">SSDG &middot; EST. 2022</span>"
+    },
+    {
+      "id": "at",
+      "href": "https://amytangerine.com",
+      "label": "Amy Tangerine",
+      "html": "<img src=\"/network-tiles/amy-tangerine-logo.png\" alt=\"\" width=\"900\" height=\"233\">"
+    },
+    {
+      "id": "mmq",
+      "href": "https://mymorningquestions.com",
+      "label": "My Morning Questions",
+      "html": "<span class=\"mmq-site\">my morning questions</span><span class=\"mmq-cur\"></span><span class=\"mmq-labels\"><i>the question</i><i>the quote</i><i>the reading</i></span>"
+    },
+    {
+      "id": "pdfn",
+      "href": "https://linslow.com/product-demos",
+      "label": "Product Demos for Normals",
+      "html": "<span class=\"pdfn-text\"><span class=\"pdfn-title\">Product Demos<br>for Normals.</span><span class=\"pdfn-when\">2nd and 4th Fridays</span></span><img src=\"/network-tiles/pdfn-projector.png\" alt=\"\" width=\"305\" height=\"360\">"
+    }
+  ]
+}
