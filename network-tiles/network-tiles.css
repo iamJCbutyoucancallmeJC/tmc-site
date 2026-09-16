@@ -1,5 +1,9 @@
 /* Network tiles: one quiet frame, eight distinct faces (t1478).
    The outer geometry is shared. Identity stays inside each tile. */
+/* The two faces that need a webfont (JC Cangilla in Newsreader, TMC in Alfa Slab One)
+   load it here, so a site that does not carry the font itself still renders the tile right (JC 9/13, seen on mymorningquestions.com). */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Alfa+Slab+One&display=swap');
+
 .network-tiles {
   --network-tile-accent: var(--accent, #3d7dbe);
   display: grid;
