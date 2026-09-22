@@ -126,3 +126,48 @@
 @media (prefers-reduced-motion: reduce) {
   .network-tile .mmq-cur { animation: none; }
 }
+
+/* The open treatment (t1559). network-tiles.js swaps each linked tile for a card:
+   the face (a button) and its back (the explanation and the link through).
+   Both sit in one cell, so the card keeps the tile's size in every box.
+   The back uses one fixed ink, not the host's --accent: Linslow's theme defines
+   --accent as a near-white grey, which made the link vanish there (9/22). */
+.network-tile-card { position: relative; display: grid; min-width: 0; }
+.network-tile-card > .network-tile,
+.network-tile-card > .network-tile-back { grid-area: 1 / 1; }
+.network-tile-card > .network-tile {
+  width: 100%; margin: 0; cursor: pointer; font: inherit;
+  transition: opacity .22s ease, transform .22s ease;
+}
+.network-tile-card::after {
+  content: '+'; position: absolute; right: 6px; bottom: 3px; pointer-events: none;
+  font: 400 12px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #9a948d; transition: opacity .22s ease;
+}
+.network-tile-card.card-tmc::after, .network-tile-card.card-mmq::after { color: rgba(242, 239, 230, .6); }
+.network-tile-back {
+  box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 4px;
+  min-width: 0; overflow: hidden; padding: 8px 11px 7px;
+  border: 1px solid #3d7dbe; background: #fdfaf7; color: #1a1a1a; text-align: left;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
+}
+.network-tile-about { margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 12px; line-height: 1.25; }
+.network-tile-go {
+  align-self: flex-start; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 10.5px; color: #3d7dbe; text-decoration: none; white-space: nowrap;
+}
+.network-tile-go:hover, .network-tile-go:focus-visible { text-decoration: underline; }
+.network-tile-card.is-open > .network-tile { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+.network-tile-card.is-open::after { opacity: 0; }
+.network-tile-card.is-open > .network-tile-back {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity .22s ease, transform .22s ease, visibility 0s;
+}
+.network-tiles--wall .network-tile-back { padding: 14px 16px 12px; }
+.network-tiles--wall .network-tile-about { font-size: 16px; line-height: 1.3; }
+.network-tiles--wall .network-tile-go { font-size: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .network-tile-card > .network-tile, .network-tile-back { transition: none; transform: none; }
+}

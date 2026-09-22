@@ -7,6 +7,11 @@
   },
   "entries": [
     {
+      "date": "2026-09-22",
+      "title": "Tiles open before they leave",
+      "summary": "Each tile in the Elsewhere row shows its logo first. A click turns it over to a sentence on what the thing is and the way there; one more click goes to the site."
+    },
+    {
       "date": "2026-09-10",
       "title": "The title stands alone",
       "summary": "The hero tagline goes. Title only, as on the covers."

@@ -5,49 +5,65 @@
       "id": "jcc",
       "href": "https://jccangilla.com",
       "label": "JC Cangilla",
-      "html": "<span class=\"jcc-name\">JC Cangilla</span><span class=\"jcc-sig\">Building...</span>"
+      "html": "<span class=\"jcc-name\">JC Cangilla</span><span class=\"jcc-sig\">Building...</span>",
+      "about": "JC Cangilla's own site: who he is and what he is working on.",
+      "go": "jccangilla.com"
     },
     {
       "id": "linslow",
       "href": "https://linslow.com",
       "label": "Linslow Industries",
-      "html": "<span class=\"linslow-mark\">// linslow industries</span>"
+      "html": "<span class=\"linslow-mark\">// linslow industries</span>",
+      "about": "Consulting for creative businesses with really tough problems.",
+      "go": "linslow.com"
     },
     {
       "id": "tmc",
       "href": "https://tuesdaymensclub.com",
       "label": "Tuesday Men's Club",
-      "html": "<span class=\"tmc-mark\">Tuesday<br>Men&rsquo;s<br>Club</span>"
+      "html": "<span class=\"tmc-mark\">Tuesday<br>Men&rsquo;s<br>Club</span>",
+      "about": "A men's club. Every other Tuesday at the Wende Museum in Culver City, since 2025.",
+      "go": "tuesdaymensclub.com"
     },
     {
       "id": "cawalk",
       "href": "https://thecaliforniawalk.com",
       "label": "The California Walk",
-      "html": "<img src=\"/network-tiles/california-walk-wordmark.png\" alt=\"\" width=\"680\" height=\"70\">"
+      "html": "<img src=\"/network-tiles/california-walk-wordmark.png\" alt=\"\" width=\"680\" height=\"70\">",
+      "about": "San Francisco to Big Sur, on foot, every April.",
+      "go": "thecaliforniawalk.com"
     },
     {
       "id": "ssdg",
       "href": "https://ssdg.me",
       "label": "Short Story Discussion Group",
-      "html": "<span class=\"ssdg-head\">DATE DUE</span><span class=\"ssdg-dbl\"></span><span class=\"ssdg-line\">Short Story</span><span class=\"ssdg-line\">Discussion Group</span><span class=\"ssdg-line\"></span><span class=\"ssdg-id\">SSDG &middot; EST. 2022</span>"
+      "html": "<span class=\"ssdg-head\">DATE DUE</span><span class=\"ssdg-dbl\"></span><span class=\"ssdg-line\">Short Story</span><span class=\"ssdg-line\">Discussion Group</span><span class=\"ssdg-line\"></span><span class=\"ssdg-id\">SSDG &middot; EST. 2022</span>",
+      "about": "Four friends reading short stories together, since 2022.",
+      "go": "ssdg.me"
     },
     {
       "id": "at",
       "href": "https://amytangerine.com",
       "label": "Amy Tangerine",
-      "html": "<img src=\"/network-tiles/amy-tangerine-logo.png\" alt=\"\" width=\"900\" height=\"233\">"
+      "html": "<img src=\"/network-tiles/amy-tangerine-logo.png\" alt=\"\" width=\"900\" height=\"233\">",
+      "about": "Amy Tangerine's shop, classes and supplies.",
+      "go": "amytangerine.com"
     },
     {
       "id": "mmq",
       "href": "https://mymorningquestions.com",
       "label": "My Morning Questions",
-      "html": "<span class=\"mmq-site\">my morning questions</span><span class=\"mmq-cur\"></span><span class=\"mmq-labels\"><i>the question</i><i>the quote</i><i>the reading</i></span>"
+      "html": "<span class=\"mmq-site\">my morning questions</span><span class=\"mmq-cur\"></span><span class=\"mmq-labels\"><i>the question</i><i>the quote</i><i>the reading</i></span>",
+      "about": "The question, the quote, the reading. Every morning.",
+      "go": "mymorningquestions.com"
     },
     {
       "id": "pdfn",
       "href": "https://linslow.com/product-demos",
       "label": "Product Demos for Normals",
-      "html": "<span class=\"pdfn-text\"><span class=\"pdfn-title\">Product Demos<br>for Normals.</span><span class=\"pdfn-when\">2nd and 4th Fridays</span></span><img src=\"/network-tiles/pdfn-projector.png\" alt=\"\" width=\"305\" height=\"360\">"
+      "html": "<span class=\"pdfn-text\"><span class=\"pdfn-title\">Product Demos<br>for Normals.</span><span class=\"pdfn-when\">2nd and 4th Fridays</span></span><img src=\"/network-tiles/pdfn-projector.png\" alt=\"\" width=\"305\" height=\"360\">",
+      "about": "A show-and-tell of things people built. Second and fourth Fridays, on Zoom.",
+      "go": "linslow.com/product-demos"
     }
   ]
 }
