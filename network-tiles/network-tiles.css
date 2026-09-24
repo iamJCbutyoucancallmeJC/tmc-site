@@ -4,6 +4,10 @@
    load it here, so a site that does not carry the font itself still renders the tile right (JC 9/13, seen on mymorningquestions.com). */
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Alfa+Slab+One&display=swap');
 
+/* A tile that is a button (t1559) must behave like the anchor it replaced: inherit the page font and start alignment.
+   Low specificity on purpose, so every per-tile font rule below still wins (9/24: font: inherit was overriding Linslow, SSDG and MMQ). */
+button.network-tile { font: inherit; text-align: start; }
+
 .network-tiles {
   --network-tile-accent: var(--accent, #3d7dbe);
   display: grid;
@@ -80,7 +84,7 @@
 .network-tile.tile-ssdg { flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 6px 12px; background: #f7f1e2; font-family: ui-monospace, Menlo, monospace; color: #262626; text-align: left; }
 .network-tile .ssdg-head { text-align: center; font-size: 7px; letter-spacing: .35em; color: rgba(38, 38, 38, .7); }
 .network-tile .ssdg-dbl { display: block; flex: none; box-sizing: content-box; width: 100%; height: 2px; margin-top: 3px; border-top: 1px solid #9db8d2; border-bottom: 1px solid #9db8d2; }
-.network-tile .ssdg-line { display: flex; flex: 1; width: 100%; align-items: flex-end; border-bottom: 1px solid #9db8d2; padding-bottom: 1px; font-size: 10px; line-height: 1; }
+.network-tile .ssdg-line { display: flex; flex: 1; width: 100%; align-items: flex-end; border-bottom: 1px solid #9db8d2; padding-bottom: 1px; font-size: 10px; line-height: 1; white-space: nowrap; }
 .network-tile .ssdg-id { padding-top: 3px; text-align: right; font-size: 6px; letter-spacing: .2em; color: rgba(38, 38, 38, .5); }
 
 .network-tile.tile-at { padding: 9px 11px; background: #fff; }
@@ -136,7 +140,7 @@
 .network-tile-card > .network-tile,
 .network-tile-card > .network-tile-back { grid-area: 1 / 1; }
 .network-tile-card > .network-tile {
-  width: 100%; margin: 0; cursor: pointer; font: inherit;
+  width: 100%; margin: 0; cursor: pointer;
   transition: opacity .22s ease, transform .22s ease;
 }
 .network-tile-card::after {
