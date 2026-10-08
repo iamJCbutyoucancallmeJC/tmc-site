@@ -223,6 +223,15 @@ nav a:hover {
     line-height: 1.35;
 }
 
+.fall-date-list .past {
+    text-decoration: line-through;
+    opacity: 0.45;
+}
+
+.session-info .club-line {
+    margin-bottom: 10px;
+}
+
 /* ============================================
    CONTENT SECTIONS
    ============================================ */
