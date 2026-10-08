@@ -996,3 +996,71 @@ nav a:hover {
         margin-top: 8px;
     }
 }
+
+/* ============================================
+   GRAB BAR INTAKE FORM (grab-bar.html)
+   ============================================ */
+.grab-bar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.grab-bar-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Bricolage Grotesque', Arial, sans-serif;
+    resize: vertical;
+}
+
+.grab-bar-form textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.grab-bar-form .choice {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grab-bar-form .choice legend {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.grab-bar-form .choice label,
+.grab-bar-form .tick {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.grab-bar-form .choice input,
+.grab-bar-form .tick input {
+    margin-right: 8px;
+}
+
+.grab-bar-form input[type="submit"] {
+    align-self: flex-start;
+}
+
+.grab-bar-form .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .grab-bar-form input[type="submit"] {
+        align-self: stretch;
+    }
+}

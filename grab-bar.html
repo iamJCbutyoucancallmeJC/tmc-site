@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB2KYQD69J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QB2KYQD69J');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grab Bar - Tuesday Men's Club</title>
+    <meta name="description" content="Put something on the Grab Bar between sessions: an offer or an ask for the men of Tuesday Men's Club.">
+    <meta property="og:title" content="The Grab Bar - Tuesday Men's Club">
+    <meta property="og:description" content="Put something on the Grab Bar between sessions: an offer or an ask.">
+    <meta property="og:url" content="https://tuesdaymensclub.com/grab-bar.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/network-tiles/network-tiles.css">
+  <script src="/network-tiles/network-tiles.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+<nav>
+    <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="details.html">Details</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://luma.com/tuesdaymensclub">Register</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://luma.com/tuesdaymensclub">Register</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Content -->
+    <section class="page-content">
+        <h1>The Grab Bar</h1>
+
+        <div class="info-block">
+            <p>The last few minutes of every session are practical. A man offers something he has or runs, or asks for something concrete, and the room answers. The offers and asks go out in Thursday's email, and the men handle the rest between themselves.</p>
+            <p>If something comes to you between Tuesdays, put it here. It goes to JC, and into Thursday's email if you say that's ok. Nothing you write here is shown on this site.</p>
+        </div>
+
+        <div class="info-block email-signup" id="grab-bar">
+            <h2>Offer or ask</h2>
+            <form id="grab-bar-form" class="signup-form grab-bar-form" autocomplete="on">
+                <input type="hidden" name="form" value="grabbar">
+                <input type="hidden" name="source" value="tuesdaymensclub.com/grab-bar">
+                <div class="hp-field" aria-hidden="true">
+                    <label for="gb-website">Leave this empty</label>
+                    <input type="text" id="gb-website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <fieldset class="choice">
+                    <legend>This is an</legend>
+                    <label><input type="radio" name="kind" value="Offer" required> Offer: something I have or run</label>
+                    <label><input type="radio" name="kind" value="Ask" required> Ask: something I'm looking for</label>
+                </fieldset>
+                <textarea name="what" rows="5" placeholder="What is it? A sentence or two is plenty." required></textarea>
+                <label class="tick"><input type="checkbox" name="ok_email" value="Yes" checked> Ok to include in Thursday's email</label>
+                <input type="submit" value="Put it on the bar">
+            </form>
+            <p id="form-success" style="display:none; color: #2a7a2a; font-weight: 600;">Got it. Thanks. JC sees it before Thursday's email goes out.</p>
+            <p class="form-note"><em>Offers go out with your name and email so the men can reach you directly. Asks go out without your name; replies come through JC.</em></p>
+        </div>
+    </section>
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Google Sheets Grab Bar intake (one-way: writes to the Sheet, never displayed here)
+        const grabBarForm = document.getElementById('grab-bar-form');
+        grabBarForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = grabBarForm.querySelector('input[type="submit"]');
+
+            // Honeypot: bots fill the hidden field; show success and send nothing.
+            if (grabBarForm.querySelector('input[name="website"]').value) {
+                grabBarForm.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+                return;
+            }
+
+            btn.value = 'Sending...';
+            btn.disabled = true;
+
+            const data = new URLSearchParams(new FormData(grabBarForm));
+            data.delete('website');
+            if (!data.get('ok_email')) data.set('ok_email', 'No');
+            fetch('https://script.google.com/macros/s/AKfycbxJ1W0TR0xsVmIG0JxAVpwX0NbVeD2Qch3MB-kgiZtzgrpgbZnloXus_cbMAAKf5m5g/exec', {
+                method: 'POST',
+                body: data
+            })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('HTTP ' + res.status + ' ' + res.statusText);
+                }
+                grabBarForm.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+            })
+            .catch(err => {
+                console.error('TMC grab bar submit failed', err);
+                btn.value = 'Put it on the bar';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            });
+        });
+    </script>
+<footer class="site-footer">
+  <div class="footer-network">
+    <span class="network-tiles-label">Elsewhere</span>
+    <div class="network-tiles">
+      <a class="tile network-tile tile-linslow" data-network-tile="linslow" href="https://linslow.com" aria-label="Linslow Industries"><span class="linslow-mark">// linslow industries</span></a>
+      <a class="tile network-tile tile-jcc" data-network-tile="jcc" href="https://jccangilla.com" aria-label="JC Cangilla"><span class="jcc-name">JC Cangilla</span><span class="jcc-sig">Building...</span></a>
+      <a class="tile network-tile tile-cawalk" data-network-tile="cawalk" href="https://thecaliforniawalk.com" aria-label="The California Walk"><img src="/network-tiles/california-walk-wordmark.png" alt="" width="680" height="70"></a>
+      <a class="tile network-tile tile-ssdg" data-network-tile="ssdg" href="https://ssdg.me" aria-label="Short Story Discussion Group"><span class="ssdg-head">DATE DUE</span><span class="ssdg-dbl"></span><span class="ssdg-line">Short Story</span><span class="ssdg-line">Discussion Group</span><span class="ssdg-line"></span><span class="ssdg-id">SSDG &middot; EST. 2022</span></a>
+    </div>
+  </div>
+  <p class="footer-changelog" style="margin-top:6px; font-size:12px;"><a href="/changelog/">How this site got the way it is</a></p>
+</footer>
+</body>
+</html>
