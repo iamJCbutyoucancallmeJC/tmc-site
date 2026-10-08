@@ -7,6 +7,11 @@
   },
   "entries": [
     {
+      "date": "2026-10-07",
+      "title": "What the club is, on the front door",
+      "summary": "The session card opens with the sentence from Details; past dates strike through; the reminder box says what it does; the button says Register, like the nav."
+    },
+    {
       "date": "2026-09-29",
       "title": "The facilitator, in his own words",
       "summary": "About the Facilitator drops the third-person bio for one line and a link to Every other Tuesday on jccangilla.com, where JC writes about a Tuesday night and why he does it. The About page now says eighteen months in."
@@ -26,8 +31,17 @@
       "title": "Waffle House on the phone; the box steps off the photo",
       "summary": "The mobile hero is Micah Cash’s Huntersville booth, matching the S37 card and Luma; red type on the pale ground, as on the cover. The Next Session box, grown tall by the fall list, sits below the photo instead of over it.",
       "options": [
-        { "key": "H1", "title": "Shrink the box", "blurb": "Hide the fall list on phones and keep the box floating over the photo." },
-        { "key": "H2", "title": "The box below the photo", "picked": "picked 9/10", "blurb": "The photo gets the top of the screen to itself; the box follows in its own cream band." }
+        {
+          "key": "H1",
+          "title": "Shrink the box",
+          "blurb": "Hide the fall list on phones and keep the box floating over the photo."
+        },
+        {
+          "key": "H2",
+          "title": "The box below the photo",
+          "picked": "picked 9/10",
+          "blurb": "The photo gets the top of the screen to itself; the box follows in its own cream band."
+        }
       ]
     },
     {
@@ -40,8 +54,18 @@
       "title": "Swan Song on the phone",
       "summary": "The mobile hero is George Byrne’s Swan Song, matching the session card and Luma. Desktop keeps the chairs; the credit sits in the footer, mobile only.",
       "options": [
-        { "key": "H1", "title": "The huddle still, bigger title", "picked": "picked 8/26, superseded", "blurb": "The orphaned purpose-shot mobile asset; the title up to 18vw." },
-        { "key": "H2", "title": "Swan Song", "picked": "picked 8/26", "blurb": "One image across the card, the calendar, and the phone." }
+        {
+          "key": "H1",
+          "title": "The huddle still, bigger title",
+          "picked": "picked 8/26, superseded",
+          "blurb": "The orphaned purpose-shot mobile asset; the title up to 18vw."
+        },
+        {
+          "key": "H2",
+          "title": "Swan Song",
+          "picked": "picked 8/26",
+          "blurb": "One image across the card, the calendar, and the phone."
+        }
       ]
     },
     {
@@ -61,10 +85,30 @@
       "important": true,
       "note": "Content refresh, not rethink.",
       "options": [
-        { "key": "A", "title": "Front the fall schedule", "picked": "picked 8/24", "blurb": "Static text is what search and link previews actually read." },
-        { "key": "B", "title": "Prune the drifted pages", "picked": "picked 8/24", "blurb": "Retire why, helpful-things, links, materials, sessions behind redirects; refresh field-trips instead of pruning it." },
-        { "key": "C", "title": "Refresh testimonials", "picked": "picked 8/24", "blurb": "Fold into About; source new quotes from the S36 asks-and-offers." },
-        { "key": "D", "title": "Tell the sixteen-months story", "picked": "picked 8/24, later turned off", "blurb": "One story, one home, linked from About." }
+        {
+          "key": "A",
+          "title": "Front the fall schedule",
+          "picked": "picked 8/24",
+          "blurb": "Static text is what search and link previews actually read."
+        },
+        {
+          "key": "B",
+          "title": "Prune the drifted pages",
+          "picked": "picked 8/24",
+          "blurb": "Retire why, helpful-things, links, materials, sessions behind redirects; refresh field-trips instead of pruning it."
+        },
+        {
+          "key": "C",
+          "title": "Refresh testimonials",
+          "picked": "picked 8/24",
+          "blurb": "Fold into About; source new quotes from the S36 asks-and-offers."
+        },
+        {
+          "key": "D",
+          "title": "Tell the sixteen-months story",
+          "picked": "picked 8/24, later turned off",
+          "blurb": "One story, one home, linked from About."
+        }
       ]
     },
     {
@@ -89,8 +133,17 @@
       "important": true,
       "note": "TMC doesn’t need any of these.",
       "options": [
-        { "key": "E1", "title": "The tile row, like the other sites", "blurb": "Borrowed faces for each property." },
-        { "key": "E2", "title": "A line of words", "picked": "picked 8/3", "blurb": "The poster site stays a poster." }
+        {
+          "key": "E1",
+          "title": "The tile row, like the other sites",
+          "blurb": "Borrowed faces for each property."
+        },
+        {
+          "key": "E2",
+          "title": "A line of words",
+          "picked": "picked 8/3",
+          "blurb": "The poster site stays a poster."
+        }
       ]
     },
     {

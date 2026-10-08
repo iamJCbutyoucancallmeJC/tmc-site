@@ -71,6 +71,10 @@
 
 .log .log-list { list-style: none; margin: 0; padding: 0; }
 
+/* Arriving on an anchor (9/30): room above the entry, and its title in the pop color. */
+.log .log-entry { scroll-margin-top: 24px; }
+.log .log-entry:target .log-title { color: var(--lg-pop); }
+
 .log .log-entry {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -231,25 +235,31 @@
 <div class="log-masthead"><span class="site"><a href="/">Tuesday Men's Club</a></span><span class="date">changelog</span></div>
 <p class="log-intro">How this site got the way it is, newest first. The entry says what changed; beside a few, a note says why, in the maker’s hand. “Considered options” opens what else was on the table.</p>
 <ol class="log-list">
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-10-07-what-the-club-is-on-the-front-door"><div class="log-main">
+<div class="log-date">2026-10-07</div>
+<h2 class="log-title">What the club is, on the front door</h2>
+<p class="log-summary">The session card opens with the sentence from Details; past dates strike through; the reminder box says what it does; the button says Register, like the nav.</p>
+</div>
+</li>
+<li class="log-entry" id="2026-09-29-the-facilitator-in-his-own-words"><div class="log-main">
 <div class="log-date">2026-09-29</div>
 <h2 class="log-title">The facilitator, in his own words</h2>
 <p class="log-summary">About the Facilitator drops the third-person bio for one line and a link to Every other Tuesday on jccangilla.com, where JC writes about a Tuesday night and why he does it. The About page now says eighteen months in.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-09-22-tiles-open-before-they-leave"><div class="log-main">
 <div class="log-date">2026-09-22</div>
 <h2 class="log-title">Tiles open before they leave</h2>
 <p class="log-summary">Each tile in the Elsewhere row shows its logo first. A click turns it over to a sentence on what the thing is and the way there; one more click goes to the site.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-09-10-the-title-stands-alone"><div class="log-main">
 <div class="log-date">2026-09-10</div>
 <h2 class="log-title">The title stands alone</h2>
 <p class="log-summary">The hero tagline goes. Title only, as on the covers.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-09-10-waffle-house-on-the-phone-the-box-steps-off-the-photo"><div class="log-main">
 <div class="log-date">2026-09-10</div>
 <h2 class="log-title">Waffle House on the phone; the box steps off the photo</h2>
 <p class="log-summary">The mobile hero is Micah Cash’s Huntersville booth, matching the S37 card and Luma; red type on the pale ground, as on the cover. The Next Session box, grown tall by the fall list, sits below the photo instead of over it.</p>
@@ -260,13 +270,13 @@
 </details>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-09-01-the-fall-list-drops-september-1"><div class="log-main">
 <div class="log-date">2026-09-01</div>
 <h2 class="log-title">The fall list drops September 1</h2>
 <p class="log-summary">Once a session has met, its date leaves the list. The strip always reads forward.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-08-26-swan-song-on-the-phone"><div class="log-main">
 <div class="log-date">2026-08-26</div>
 <h2 class="log-title">Swan Song on the phone</h2>
 <p class="log-summary">The mobile hero is George Byrne’s Swan Song, matching the session card and Luma. Desktop keeps the chairs; the credit sits in the footer, mobile only.</p>
@@ -277,19 +287,19 @@
 </details>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-08-26-the-session-card-in-the-house-palette-bricolage-everywhere"><div class="log-main">
 <div class="log-date">2026-08-26</div>
 <h2 class="log-title">The session card in the house palette; Bricolage everywhere</h2>
 <p class="log-summary">Cream ground, dark text, red accents; the divider rule goes. Arial gives way to Bricolage Grotesque site-wide, matching the flyers.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-08-26-men-join-us"><div class="log-main">
 <div class="log-date">2026-08-26</div>
 <h2 class="log-title">Men, join us.</h2>
 <p class="log-summary">The tagline. The fall run extends through December 15.</p>
 </div>
 </li>
-<li class="log-entry important"><div class="log-main">
+<li class="log-entry important" id="2026-08-24-the-fall-schedule-on-the-homepage"><div class="log-main">
 <div class="log-date">2026-08-24</div>
 <h2 class="log-title">The fall schedule, on the homepage</h2>
 <p class="log-summary">A plain static list of the fall run near the Next Session box: scannable, and it survives iframe-blocking. The meta description stops saying February.</p>
@@ -303,25 +313,25 @@
 </div>
 <aside class="log-note">Content refresh, not rethink.<div class="who">JC, 8/24</div></aside>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-08-24-prune-the-drifted-pages"><div class="log-main">
 <div class="log-date">2026-08-24</div>
 <h2 class="log-title">Prune the drifted pages</h2>
 <p class="log-summary">why, helpful-things, links, materials, and sessions retire behind redirects. Field trips is refreshed as its own home instead of pruned.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-08-10-register-is-the-luma-page"><div class="log-main">
 <div class="log-date">2026-08-10</div>
 <h2 class="log-title">Register is the Luma page</h2>
 <p class="log-summary">Register goes to the Luma calendar site-wide; register.html becomes an instant redirect so old links and QR codes keep working. The email list stays its own door.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-08-04-rsvp-on-the-hero-the-calendar-on-details"><div class="log-main">
 <div class="log-date">2026-08-04</div>
 <h2 class="log-title">RSVP on the hero; the calendar on Details</h2>
 <p class="log-summary">The hand-edited Upcoming lists give way to the self-updating Luma embed. An RSVP button on the session box, patched per session.</p>
 </div>
 </li>
-<li class="log-entry important"><div class="log-main">
+<li class="log-entry important" id="2026-08-03-tmc-keeps-a-plain-text-elsewhere-row"><div class="log-main">
 <div class="log-date">2026-08-03</div>
 <h2 class="log-title">TMC keeps a plain-text Elsewhere row</h2>
 <p class="log-summary">The tile row the other sites took is reverted here to a line of words. “A JC Cangilla project” goes.</p>
@@ -333,19 +343,19 @@
 </div>
 <aside class="log-note">TMC doesn’t need any of these.<div class="who">JC, 8/3</div></aside>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-06-16-the-sessions-page-leaves-the-nav"><div class="log-main">
 <div class="log-date">2026-06-16</div>
 <h2 class="log-title">The Sessions page leaves the nav</h2>
 <p class="log-summary">Kept at its URL, out of the nav. Summer Wende sessions added; the spring flyer comes down.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-06-11-the-homepage-form-writes-to-a-sheet"><div class="log-main">
 <div class="log-date">2026-06-11</div>
 <h2 class="log-title">The homepage form writes to a sheet</h2>
 <p class="log-summary">The dead Kit popup is replaced with a Google Sheets endpoint. The roster of record stays the sheet.</p>
 </div>
 </li>
-<li class="log-entry"><div class="log-main">
+<li class="log-entry" id="2026-06-04-elsewhere-joins-the-footer"><div class="log-main">
 <div class="log-date">2026-06-04</div>
 <h2 class="log-title">Elsewhere joins the footer</h2>
 <p class="log-summary">A row linking the other four properties on every page, where before there was only an attribution line.</p>
