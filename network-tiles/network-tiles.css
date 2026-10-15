@@ -8,8 +8,11 @@
    Low specificity on purpose, so every per-tile font rule below still wins (9/24: font: inherit was overriding Linslow, SSDG and MMQ). */
 button.network-tile { font: inherit; text-align: start; }
 
+/* Hover and focus are pen, the family blue (2026-10-15, t1798). The strip reads the host's --pen,
+   never its --accent: Linslow's --accent was a near-white grey and the walk's is sienna. A host on a
+   dark ground sets --pen to the night value, #8db8e8. */
 .network-tiles {
-  --network-tile-accent: var(--accent, #3d7dbe);
+  --network-tile-accent: var(--pen, #2f6fb0);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
@@ -134,8 +137,9 @@ button.network-tile { font: inherit; text-align: start; }
 /* The open treatment (t1559). network-tiles.js swaps each linked tile for a card:
    the face (a button) and its back (the explanation and the link through).
    Both sit in one cell, so the card keeps the tile's size in every box.
-   The back uses one fixed ink, not the host's --accent: Linslow's theme defines
-   --accent as a near-white grey, which made the link vanish there (9/22). */
+   The back is always paper, so its border and link use pen's paper value whatever the host sets
+   (5.0:1 on #fdfaf7; the host's --accent made the link vanish on Linslow, 9/22). The card pins
+   --pen as well, so a host focus ring drawn inside it stays the paper value (t1798). */
 .network-tile-card { position: relative; display: grid; min-width: 0; }
 .network-tile-card > .network-tile,
 .network-tile-card > .network-tile-back { grid-area: 1 / 1; }
@@ -152,14 +156,15 @@ button.network-tile { font: inherit; text-align: start; }
 .network-tile-back {
   box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 4px;
   min-width: 0; overflow: hidden; padding: 8px 11px 7px;
-  border: 1px solid #3d7dbe; background: #fdfaf7; color: #1a1a1a; text-align: left;
+  --pen: #2f6fb0;
+  border: 1px solid #2f6fb0; background: #fdfaf7; color: #1a1a1a; text-align: left;
   opacity: 0; visibility: hidden; transform: translateY(8px);
   transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
 }
 .network-tile-about { margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 12px; line-height: 1.25; }
 .network-tile-go {
   align-self: flex-start; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 10.5px; color: #3d7dbe; text-decoration: none; white-space: nowrap;
+  font-size: 10.5px; color: #2f6fb0; text-decoration: none; white-space: nowrap;
 }
 .network-tile-go:hover, .network-tile-go:focus-visible { text-decoration: underline; }
 .network-tile-card.is-open > .network-tile { opacity: 0; transform: translateY(-8px); pointer-events: none; }
