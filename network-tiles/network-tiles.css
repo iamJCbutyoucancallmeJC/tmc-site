@@ -76,7 +76,7 @@ button.network-tile { font: inherit; text-align: start; }
 .network-tile .jcc-name { font-family: 'Newsreader', Georgia, serif; font-size: 19px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: #121212; }
 .network-tile .jcc-sig { margin-top: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; color: #6b6560; }
 
-.network-tile.tile-linslow { padding: 8px 12px; background: #f4f2ee; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #3d7dbe; }
+.network-tile.tile-linslow { padding: 8px 12px; background: #f4f2ee; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #1d4f88; } /* linslow-blue (JC, 2026-10-15, t1812) */
 
 .network-tile.tile-tmc { justify-content: flex-start; padding: 6px 8px; background: #111; }
 .network-tile .tmc-mark { font-family: 'Alfa Slab One', 'Arial Black', Arial, sans-serif; font-size: 22px; font-weight: 400; line-height: .88; letter-spacing: -.01em; color: #f2efe6; }
