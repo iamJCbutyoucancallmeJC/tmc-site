@@ -167,6 +167,8 @@ button.network-tile { font: inherit; text-align: start; }
   font-size: 10.5px; color: #2f6fb0; text-decoration: none; white-space: nowrap;
 }
 .network-tile-go:hover, .network-tile-go:focus-visible { text-decoration: underline; }
+/* Pen even under a host's footer link rule (TMC's .site-footer a is #6f6f6f, and outranks a bare class). */
+.network-tile-back .network-tile-go, .network-tile-back .network-tile-go:hover { color: #2f6fb0; }
 .network-tile-card.is-open > .network-tile { opacity: 0; transform: translateY(-8px); pointer-events: none; }
 .network-tile-card.is-open::after { opacity: 0; }
 .network-tile-card.is-open > .network-tile-back {
