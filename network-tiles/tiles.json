@@ -61,8 +61,8 @@
       "id": "pdfn",
       "href": "https://linslow.com/product-demos",
       "label": "Product Demos for Normals",
-      "html": "<span class=\"pdfn-text\"><span class=\"pdfn-title\">Product Demos<br>for Normals.</span><span class=\"pdfn-when\">2nd and 4th Fridays</span></span><img src=\"/network-tiles/pdfn-projector.png\" alt=\"\" width=\"305\" height=\"360\">",
-      "about": "A show-and-tell of things people built. Second and fourth Fridays, on Zoom.",
+      "html": "<span class=\"pdfn-text\"><span class=\"pdfn-title\">Product Demos<br>for Normals.</span><span class=\"pdfn-when\">A &ldquo;podcast&rdquo;</span></span><img src=\"/network-tiles/pdfn-projector.png\" alt=\"\" width=\"305\" height=\"360\">",
+      "about": "A show-and-tell of things people built. Now a “podcast.”",
       "go": "linslow.com/product-demos"
     }
   ]
