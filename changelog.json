@@ -3,9 +3,15 @@
   "site": {
     "name": "Tuesday Men's Club",
     "url": "https://tuesdaymensclub.com",
-    "home": "/"
+    "home": "/",
+    "ogImage": "/og-image.png"
   },
   "entries": [
+    {
+      "date": "2026-10-17",
+      "title": "The share card, at full weight",
+      "summary": "A shared link shows the club's name in Alfa Slab One on black, the way the header sets it, with the domain at the foot."
+    },
     {
       "date": "2026-10-15",
       "title": "The house colors, named",
