@@ -221,21 +221,23 @@
             }
         });
 
-        // Random flyer selection
-        const isMobile = window.innerWidth <= 768;
+        // Random flyer selection. The page flyer goes tall on phones, at the same
+        // 480px line where the stylesheet switches to the phone layout. The popup
+        // always takes the landscape flyer: it caps the flyer at 180px tall, where
+        // a portrait one shrinks to a thumbnail.
+        const isMobile = window.innerWidth <= 480;
         const flyerCount = 4;
-        const prefix = isMobile ? 'flyer_mobile_' : 'flyer_desktop_';
 
-        function getRandomFlyer() {
+        function getRandomFlyer(prefix) {
             const num = Math.floor(Math.random() * flyerCount) + 1;
             return `images/${prefix}${num}.jpeg`;
         }
 
         // Set random flyer at bottom of page
-        document.getElementById('flyerImage').src = getRandomFlyer();
+        document.getElementById('flyerImage').src = getRandomFlyer(isMobile ? 'flyer_mobile_' : 'flyer_desktop_');
 
         // Set random flyer in popup (different one)
-        document.getElementById('popupFlyer').src = getRandomFlyer();
+        document.getElementById('popupFlyer').src = getRandomFlyer('flyer_desktop_');
 
         // Email popup with 45-second delay
         const popup = document.getElementById('emailPopup');

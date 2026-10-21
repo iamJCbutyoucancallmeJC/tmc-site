@@ -139,10 +139,10 @@
             }
         });
 
-        // Random flyer selection for popup
-        const isMobile = window.innerWidth <= 768;
+        // Random flyer selection for popup. Always the landscape flyer: the popup
+        // caps the flyer at 180px tall, where a portrait one shrinks to a thumbnail.
         const flyerCount = 4;
-        const prefix = isMobile ? 'flyer_mobile_' : 'flyer_desktop_';
+        const prefix = 'flyer_desktop_';
 
         function getRandomFlyer() {
             const num = Math.floor(Math.random() * flyerCount) + 1;

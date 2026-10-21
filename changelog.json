@@ -8,6 +8,11 @@
   },
   "entries": [
     {
+      "date": "2026-10-21",
+      "title": "The popup shows the wide flyer",
+      "summary": "The signup popup always shows the landscape flyer, which fills its frame. The About page switches to the tall flyer only on phones, where the layout does."
+    },
+    {
       "date": "2026-10-17",
       "title": "The share card, at full weight",
       "summary": "A shared link shows the club's name in Alfa Slab One on black, the way the header sets it, with the domain at the foot."
