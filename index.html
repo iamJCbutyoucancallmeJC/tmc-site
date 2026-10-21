@@ -226,7 +226,8 @@
   <p class="footer-changelog" style="margin-top:6px; font-size:12px;"><a href="/changelog/">How this site got the way it is</a></p>
 </footer>
 <script>
-(function(){var d=new Date();var t=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');document.querySelectorAll('.fall-date-list [data-date]').forEach(function(e){if(e.getAttribute('data-date')<t){e.classList.add('past');}});})();
+// A date strikes through once that session ends (8:30pm Pacific), whatever the visitor's timezone.
+(function(){var p={};new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});var now=p.year+'-'+p.month+'-'+p.day+' '+p.hour+':'+p.minute;document.querySelectorAll('.fall-date-list [data-date]').forEach(function(e){if(e.getAttribute('data-date')+' 20:30'<=now){e.classList.add('past');}});})();
 </script>
 </body>
 </html>
