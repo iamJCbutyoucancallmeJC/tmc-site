@@ -8,6 +8,11 @@
   },
   "entries": [
     {
+      "date": "2026-10-25",
+      "title": "The SSDG tile's serial, readable",
+      "summary": "The small serial on the SSDG tile takes the same ink as the line above it, so it clears the contrast bar."
+    },
+    {
       "date": "2026-10-21",
       "title": "The popup shows the wide flyer",
       "summary": "The signup popup always shows the landscape flyer, which fills its frame. The About page switches to the tall flyer only on phones, where the layout does."
