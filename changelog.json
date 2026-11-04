@@ -8,6 +8,11 @@
   },
   "entries": [
     {
+      "date": "2026-11-04",
+      "title": "The changelog wears Bricolage",
+      "summary": "Entry titles were set in Georgia, a face the club uses nowhere else: the shared changelog's title slot had no value here. It takes the site's own face, with weight in place of an italic the family does not have."
+    },
+    {
       "date": "2026-10-21",
       "title": "The popup shows the wide flyer",
       "summary": "The signup popup always shows the landscape flyer, which fills its frame. The About page switches to the tall flyer only on phones, where the layout does."
