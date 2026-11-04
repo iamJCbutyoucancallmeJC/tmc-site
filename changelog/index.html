@@ -211,7 +211,13 @@
 
 
 .page-content.log-page { max-width: 1040px; }
-.tmc-log { --log-bg: #fff; --log-text: #333; --log-dim: #666; --log-faint: #999; --log-pop: #D4482F; max-width: none; margin: 0; padding: 0; }
+.tmc-log { --log-bg: #fff; --log-text: #333; --log-dim: #666; --log-faint: #999; --log-pop: #D4482F; max-width: none; margin: 0; padding: 0;
+  --log-font-serif: 'Bricolage Grotesque', system-ui, sans-serif; }
+/* 11/04 (design critic P4): the title slot had no value here, so it fell through to the module's
+   Georgia default, a face TMC does not own. Bricolage is the site face (ruled 8/26, matching the
+   flyers). Google serves no Bricolage italic, so the title loses the module's italic and takes
+   weight instead. */
+.tmc-log .log-title { font-style: normal; font-weight: 600; }
 </style>
   <link rel="stylesheet" href="/network-tiles/network-tiles.css">
   <script src="/network-tiles/network-tiles.js" defer></script>
@@ -245,6 +251,12 @@
 <p class="log-summary">The signup popup always shows the landscape flyer, which fills its frame. The About page switches to the tall flyer only on phones, where the layout does.</p>
 </div>
 </li>
+<li class="log-entry" id="2026-10-20-a-session-strikes-the-night-it-ends"><div class="log-main">
+<div class="log-date">2026-10-20</div>
+<h2 class="log-title">A session strikes the night it ends</h2>
+<p class="log-summary">The fall list strikes a date at 8:30pm Pacific, when the room empties, instead of waiting for the next morning.</p>
+</div>
+</li>
 <li class="log-entry" id="2026-10-17-the-share-card-at-full-weight"><div class="log-main">
 <div class="log-date">2026-10-17</div>
 <h2 class="log-title">The share card, at full weight</h2>
@@ -255,6 +267,12 @@
 <div class="log-date">2026-10-15</div>
 <h2 class="log-title">The house colors, named</h2>
 <p class="log-summary">Ink, cream, red and rust are tokens the stylesheet reads; corners settle on 8px; keyboard focus draws a 2px pen ring. The hero and the poster are untouched.</p>
+</div>
+</li>
+<li class="log-entry" id="2026-10-14-since-april-2025"><div class="log-main">
+<div class="log-date">2026-10-14</div>
+<h2 class="log-title">Since April 2025</h2>
+<p class="log-summary">About counts from the first session instead of saying how many months it has been, so the line cannot go stale.</p>
 </div>
 </li>
 <li class="log-entry" id="2026-10-07-what-the-club-is-on-the-front-door"><div class="log-main">
