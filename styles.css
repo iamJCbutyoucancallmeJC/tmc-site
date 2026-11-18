@@ -684,9 +684,9 @@ nav a:hover {
         height: 62vh;
         min-height: 440px;
         max-height: 640px;
-        background-image: url('images/hero-mobile-wafflehouse.jpg');
+        background-image: url('images/hero-mobile-powell.jpg');
         background-size: cover;
-        background-position: 50% 40%;
+        background-position: 50% 50%;
     }
 
     .hero-text {
@@ -695,7 +695,8 @@ nav a:hover {
         right: 20px;
     }
 
-    /* Waffle House is a pale-ground image: red type, as on the Luma cover. */
+    /* The phone photo follows the next session's Luma cover (JC, 11/17).
+       S42: Gus Powell's fog; a pale ground, so red type, as on the cover. */
     .hero-title {
         font-size: clamp(56px, 18vw, 80px);
         color: var(--tmc-red);
@@ -1021,7 +1022,7 @@ nav a:hover {
     .hero-credit {
         display: block;
         font-size: 11px;
-        color: #8A8478;
+        color: #6E685D;
         text-align: center;
         margin-top: 8px;
     }
